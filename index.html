@@ -431,8 +431,6 @@
 
     .hidden{ display:none !important; }
   </style>
-
-  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 </head>
 
 <body>
@@ -628,7 +626,7 @@
 本契約之附件「寵物基本資料及健康狀況填寫表」（包含但不限於寵物基本資料、健康狀況、個性傾向、病史、服務項目及相關告知事項），
 為本契約之一部分，與本契約具有同一之效力。甲方確認已於簽訂本契約前，依乙方之說明完整填寫前述附件，並同意其內容作為乙方評估是否提供犬、貓美容服務及服務方式之依據。前述附件得以書面、電子文件、拍照、掃描或其他可供日後查證之方式留存，均視為有效。
 
-—————————————————
+———————————————————————————
 立契約書人
 甲方（消費者）
 姓名：
@@ -1246,7 +1244,7 @@
 
     <div class="card">
       <div class="payHeader">
-        <div class="sectionTitle" style="margin:0;">支付方式</div>
+        <div class="sectionTitle" style="margin:0;">支付方式（選填）</div>
         <div class="payTotal">總金額：<span id="payTotalText">$0</span></div>
       </div>
 
@@ -1256,7 +1254,7 @@
           現金
         </label>
         <div id="cashAmountWrap" class="methodAmountWrap">
-          <input id="payAmountCash" class="input js-currency" inputmode="numeric" placeholder="請輸入現金金額">
+          <input id="payAmountCash" class="input js-currency" inputmode="numeric" placeholder="請輸入現金金額（選填）">
         </div>
       </div>
 
@@ -1266,7 +1264,7 @@
           轉帳
         </label>
         <div id="transferAmountWrap" class="methodAmountWrap">
-          <input id="payAmountTransfer" class="input js-currency" inputmode="numeric" placeholder="請輸入轉帳金額">
+          <input id="payAmountTransfer" class="input js-currency" inputmode="numeric" placeholder="請輸入轉帳金額（選填）">
         </div>
       </div>
 
@@ -1276,13 +1274,13 @@
           電子支付
         </label>
         <div id="epayAmountWrap" class="methodAmountWrap">
-          <input id="payAmountEpay" class="input js-currency" inputmode="numeric" placeholder="請輸入電子支付金額">
+          <input id="payAmountEpay" class="input js-currency" inputmode="numeric" placeholder="請輸入電子支付金額（選填）">
         </div>
       </div>
 
       <div class="grid2" style="margin-top:12px;">
         <div>
-          <div class="miniLabel">支付時間</div>
+          <div class="miniLabel">支付時間（選填）</div>
           <input id="payDate" class="input js-date" inputmode="numeric" placeholder="YYYY/MM/DD" maxlength="10">
         </div>
         <div></div>
@@ -1320,7 +1318,7 @@
       <div class="label">甲方簽名</div>
       <canvas id="sig"></canvas>
 
-      <div class="dangerNote">簽名完成後將自動回傳至聊天室</div>
+      <div class="dangerNote">簽名完成後將送出資料並寄送副本</div>
 
       <button id="clear" class="btn btnClear" type="button">清除簽名</button>
       <div id="msg" class="msg"></div>
@@ -1330,9 +1328,8 @@
   </div>
 
 <script>
-const LIFF_ID = "2009451176-8qZbpera";
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzKXHTHeeymVN02JZrWiKH4as-bSO2eWqx_V36hqqRztPepaysytkveL2TDrNp208cF/exec";
-const SHARED_SECRET = "xiongwang";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxkMkvdl2eQ6-yRVHHz2Mt-l1CuXW2IPkORwywz3NfOVhG1uyKsYW9PNZEOlSDFzS5YWw/exec";
+const SHARED_SECRET = "kumajima2025";
 
 const STORE_VET = {
   name: "愛心動物醫院",
@@ -1487,29 +1484,6 @@ function todayYMD() {
   return `${y}/${m}/${dd}`;
 }
 
-async function initLIFF() {
-  try {
-    console.log("[STEP] initLIFF start");
-
-    if (!window.liff) throw new Error("LIFF SDK 載入失敗");
-
-    await liff.init({ liffId: LIFF_ID });
-    console.log("[STEP] liff.init success");
-
-    if (!liff.isLoggedIn()) {
-      console.log("[STEP] LIFF not logged in, redirect login");
-      liff.login();
-      return false;
-    }
-
-    console.log("[STEP] LIFF logged in");
-    return true;
-  } catch (e) {
-    console.error("[ERROR] initLIFF failed:", e);
-    throw new Error("LINE 初始化失敗，請重新開啟表單");
-  }
-}
-
 window.handleSubmit = async function () {
   const canvas = document.getElementById("sig");
   const submitBtn = document.getElementById("submit");
@@ -1626,12 +1600,12 @@ window.handleSubmit = async function () {
     }
 
     const signatureDataUrl = canvas.toDataURL("image/png");
-console.log("[DEBUG] signature length:", signatureDataUrl?.length || 0);
+    console.log("[DEBUG] signature length:", signatureDataUrl?.length || 0);
 
-if (!signatureDataUrl || signatureDataUrl.length < 3000) {
-  setError("請先完成簽名");
-  return;
-}
+    if (!signatureDataUrl || signatureDataUrl.length < 3000) {
+      setError("請先完成簽名");
+      return;
+    }
 
     if (submitBtn) submitBtn.disabled = true;
 
@@ -1849,35 +1823,6 @@ if (!signatureDataUrl || signatureDataUrl.length < 3000) {
       return;
     }
 
-    if (data.payMethods.length === 0) {
-      setError("請至少勾選一種支付方式");
-      resetSubmit();
-      return;
-    }
-
-    for (const item of data.paymentDetails) {
-      if (!item.amount) {
-        setError(`請填寫「${item.method}」金額`);
-        resetSubmit();
-        return;
-      }
-    }
-
-    setStep("正在初始化 LINE...");
-    const ok = await initLIFF();
-    if (!ok) {
-      resetSubmit();
-      return;
-    }
-
-    let profile = null;
-    try {
-      profile = await liff.getProfile();
-      console.log("[DEBUG] profile:", profile);
-    } catch (e) {
-      console.warn("[WARN] getProfile failed:", e);
-    }
-
     const chipText = (data.chipHas === "有")
       ? `有${data.chipNo ? "（" + data.chipNo + "）" : "（未填號碼）"}`
       : "無";
@@ -1897,9 +1842,11 @@ if (!signatureDataUrl || signatureDataUrl.length < 3000) {
         : `${item.part}：正常`;
     }).join("、");
 
-    const paymentText = data.paymentDetails
-      .map(item => `${item.method}${item.amount ? "：" + item.amount : ""}`)
-      .join("、");
+    const paymentText = data.paymentDetails.length
+      ? data.paymentDetails
+          .map(item => item.amount ? `${item.method}：${item.amount}` : `${item.method}`)
+          .join("、")
+      : "（未填）";
 
     const washTextList = [...data.serviceWash];
     if (data.serviceWashOther) washTextList.push(data.serviceWashOther);
@@ -1909,7 +1856,7 @@ if (!signatureDataUrl || signatureDataUrl.length < 3000) {
 
     const completeNote =
 `（簽署資料與簽名已完成。
-副本已寄送至您的Email信箱。
+副本已寄送至您的 Email 信箱。
 
 若有多隻毛孩，請為每隻毛孩分別填寫一份表單並各自送出。）`;
 
@@ -1948,7 +1895,7 @@ SPA：${formatServiceText(data.serviceSpa)}
 住宿金額：${data.stayAmount || "（未填）"}
 住宿用品：${formatServiceText(stayItemTextList)}
 其他服務：${data.serviceOther ? formatServiceText([data.serviceOther]) : "（未填）"}
-支付方式 / 金額：${paymentText || "（未填）"}
+支付方式 / 金額：${paymentText}
 支付總金額：${data.payTotal || "$0"}
 支付時間：${data.payDate || "（未填）"}
 
@@ -1969,10 +1916,11 @@ ${completeNote}`;
       data,
       signatureDataUrl,
       line: {
-        userId: profile?.userId || "",
-        displayName: profile?.displayName || ""
+        userId: "",
+        displayName: ""
       },
-      contractText: contractTextValue
+      contractText: contractTextValue,
+      textMsg
     };
 
     console.log("[DEBUG] payload prepared");
@@ -2016,16 +1964,7 @@ ${completeNote}`;
       clearTimeout(timeoutId);
     }
 
-    setStep("資料已送到系統，正在傳送 LINE 訊息...");
-
-    try {
-      await liff.sendMessages([{ type: "text", text: textMsg }]);
-      console.log("[STEP] liff.sendMessages success");
-    } catch (e) {
-      console.warn("[WARN] LINE 訊息傳送失敗，但 GAS 已成功：", e);
-    }
-
-    setOK("資料已送出！\n副本已寄送完成，可以回到聊天室了！");
+    setOK("資料已送出！\n副本已寄送完成！");
     resetSubmit();
     console.log("========== handleSubmit success ==========");
 
@@ -2044,13 +1983,11 @@ ${completeNote}`;
 
 document.addEventListener("DOMContentLoaded", function () {
   const signDate = document.getElementById("signDate");
-  const payDate = document.getElementById("payDate");
   const canvas = document.getElementById("sig");
   const clearBtn = document.getElementById("clear");
   const msg = document.getElementById("msg");
 
   if (signDate) signDate.value = todayYMD();
-  if (payDate) payDate.value = todayYMD();
 
   document.querySelectorAll(".js-date").forEach(el => {
     el.addEventListener("input", e => {
@@ -2230,108 +2167,108 @@ document.addEventListener("DOMContentLoaded", function () {
     refresh();
   });
 
-if (canvas) {
-  const ctx = canvas.getContext("2d");
-  let drawing = false;
+  if (canvas) {
+    const ctx = canvas.getContext("2d");
+    let drawing = false;
 
-  function setupContext() {
-    ctx.lineWidth = 4;
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
-    ctx.strokeStyle = "#3F342C";
-    ctx.fillStyle = "#FFFFFF";
-  }
-
-  function syncSize(preserveDrawing = true) {
-    const r = canvas.getBoundingClientRect();
-    const dpr = window.devicePixelRatio || 1;
-
-    let oldDataUrl = "";
-    if (preserveDrawing) {
-      try {
-        oldDataUrl = canvas.toDataURL("image/png");
-      } catch (e) {
-        oldDataUrl = "";
-      }
+    function setupContext() {
+      ctx.lineWidth = 4;
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      ctx.strokeStyle = "#3F342C";
+      ctx.fillStyle = "#FFFFFF";
     }
 
-    canvas.width = Math.max(1, Math.round(r.width * dpr));
-    canvas.height = Math.max(1, Math.round(r.height * dpr));
-
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    setupContext();
-    ctx.fillRect(0, 0, r.width, r.height);
-
-    if (oldDataUrl && oldDataUrl.length > 3000) {
-      const img = new Image();
-      img.onload = function () {
-        ctx.drawImage(img, 0, 0, r.width, r.height);
-      };
-      img.src = oldDataUrl;
-    }
-  }
-
-  function point(e) {
-    const r = canvas.getBoundingClientRect();
-    return {
-      x: e.clientX - r.left,
-      y: e.clientY - r.top
-    };
-  }
-
-  function lockScroll(lock) {
-    document.body.style.overflow = lock ? "hidden" : "";
-    document.body.style.touchAction = lock ? "none" : "";
-  }
-
-  function down(e) {
-    e.preventDefault();
-    drawing = true;
-    lockScroll(true);
-
-    const p = point(e);
-    ctx.beginPath();
-    ctx.moveTo(p.x, p.y);
-
-    if (msg) msg.textContent = "";
-  }
-
-  function move(e) {
-    if (!drawing) return;
-    e.preventDefault();
-
-    const p = point(e);
-    ctx.lineTo(p.x, p.y);
-    ctx.stroke();
-  }
-
-  function up() {
-    if (!drawing) return;
-    drawing = false;
-    lockScroll(false);
-  }
-
-  syncSize(false);
-
-  canvas.addEventListener("pointerdown", down, { passive: false });
-  canvas.addEventListener("pointermove", move, { passive: false });
-  window.addEventListener("pointerup", up);
-  window.addEventListener("pointercancel", up);
-
-  if (clearBtn) {
-    clearBtn.addEventListener("click", () => {
+    function syncSize(preserveDrawing = true) {
       const r = canvas.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+
+      let oldDataUrl = "";
+      if (preserveDrawing) {
+        try {
+          oldDataUrl = canvas.toDataURL("image/png");
+        } catch (e) {
+          oldDataUrl = "";
+        }
+      }
+
+      canvas.width = Math.max(1, Math.round(r.width * dpr));
+      canvas.height = Math.max(1, Math.round(r.height * dpr));
+
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       setupContext();
-      ctx.clearRect(0, 0, r.width, r.height);
       ctx.fillRect(0, 0, r.width, r.height);
 
-      if (msg) {
-        msg.textContent = "已清除，請重新簽名";
-        msg.style.color = "#9E5E4A";
+      if (oldDataUrl && oldDataUrl.length > 3000) {
+        const img = new Image();
+        img.onload = function () {
+          ctx.drawImage(img, 0, 0, r.width, r.height);
+        };
+        img.src = oldDataUrl;
       }
-    });
+    }
+
+    function point(e) {
+      const r = canvas.getBoundingClientRect();
+      return {
+        x: e.clientX - r.left,
+        y: e.clientY - r.top
+      };
+    }
+
+    function lockScroll(lock) {
+      document.body.style.overflow = lock ? "hidden" : "";
+      document.body.style.touchAction = lock ? "none" : "";
+    }
+
+    function down(e) {
+      e.preventDefault();
+      drawing = true;
+      lockScroll(true);
+
+      const p = point(e);
+      ctx.beginPath();
+      ctx.moveTo(p.x, p.y);
+
+      if (msg) msg.textContent = "";
+    }
+
+    function move(e) {
+      if (!drawing) return;
+      e.preventDefault();
+
+      const p = point(e);
+      ctx.lineTo(p.x, p.y);
+      ctx.stroke();
+    }
+
+    function up() {
+      if (!drawing) return;
+      drawing = false;
+      lockScroll(false);
+    }
+
+    syncSize(false);
+
+    canvas.addEventListener("pointerdown", down, { passive: false });
+    canvas.addEventListener("pointermove", move, { passive: false });
+    window.addEventListener("pointerup", up);
+    window.addEventListener("pointercancel", up);
+
+    if (clearBtn) {
+      clearBtn.addEventListener("click", () => {
+        const r = canvas.getBoundingClientRect();
+        setupContext();
+        ctx.clearRect(0, 0, r.width, r.height);
+        ctx.fillRect(0, 0, r.width, r.height);
+
+        if (msg) {
+          msg.textContent = "已清除，請重新簽名";
+          msg.style.color = "#9E5E4A";
+        }
+      });
+    }
   }
-}
 });
 </script>
 </body>
