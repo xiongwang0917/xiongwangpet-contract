@@ -1,463 +1,463 @@
-!doctype html
-html lang=zh-Hant
-head
-  meta charset=utf-8 
-  meta name=viewport content=width=device-width, initial-scale=1, viewport-fit=cover 
-  title寵物美容服務定型化契約title
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>寵物美容服務定型化契約</title>
 
-  style
-    @import url('httpsfonts.googleapis.comcss2family=Noto+Sans+TCwght@400;600;700;800&display=swap');
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700;800&display=swap');
 
-    root{
-      --bg#F5F0E8;
-      --card#FFFDF9;
-      --border#D9C8B5;
-      --text#3F342C;
-      --muted#857469;
-      --latte#8B735F;
-      --danger#9E5E4A;
-      --ok#4E6B57;
-      --radius22px;
-      --radius-sm16px;
-      --shadow0 10px 28px rgba(73, 58, 46, .08);
-      --soft#F2EAE1;
-      --soft-2#EFE5DA;
+    :root{
+      --bg:#F5F0E8;
+      --card:#FFFDF9;
+      --border:#D9C8B5;
+      --text:#3F342C;
+      --muted:#857469;
+      --latte:#8B735F;
+      --danger:#9E5E4A;
+      --ok:#4E6B57;
+      --radius:22px;
+      --radius-sm:16px;
+      --shadow:0 10px 28px rgba(73, 58, 46, .08);
+      --soft:#F2EAE1;
+      --soft-2:#EFE5DA;
     }
 
-    { box-sizingborder-box; }
-    html,body{ overscroll-behaviornone; }
+    *{ box-sizing:border-box; }
+    html,body{ overscroll-behavior:none; }
 
     body{
-      margin0;
-      backgroundvar(--bg);
-      colorvar(--text);
-      font-familyNoto Sans TC,-apple-system,BlinkMacSystemFont,PingFang TC,Heiti TC,Microsoft JhengHei,sans-serif;
-      overflow-xhidden;
-      letter-spacing.2px;
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:"Noto Sans TC",-apple-system,BlinkMacSystemFont,"PingFang TC","Heiti TC","Microsoft JhengHei",sans-serif;
+      overflow-x:hidden;
+      letter-spacing:.2px;
     }
 
     .wrap{
-      max-width680px;
-      margin0 auto;
-      padding18px 14px 32px;
+      max-width:680px;
+      margin:0 auto;
+      padding:18px 14px 32px;
     }
 
     .card{
-      backgroundvar(--card);
-      border-radiusvar(--radius);
-      padding18px 16px;
-      margin14px 0;
-      border1px solid rgba(217,200,181,.95);
-      box-shadowvar(--shadow);
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:18px 16px;
+      margin:14px 0;
+      border:1px solid rgba(217,200,181,.95);
+      box-shadow:var(--shadow);
     }
 
     .logoBox{
-      text-aligncenter;
-      margin2px 0 12px;
+      text-align:center;
+      margin:2px 0 12px;
     }
 
     .logoBox img{
-      max-width120px;
-      max-height120px;
-      widthauto;
-      heightauto;
-      object-fitcontain;
-      displayinline-block;
+      max-width:120px;
+      max-height:120px;
+      width:auto;
+      height:auto;
+      object-fit:contain;
+      display:inline-block;
     }
 
     .title{
-      font-size26px;
-      font-weight800;
-      margin2px 0 10px;
-      letter-spacing.5px;
-      text-aligncenter;
-      colorvar(--text);
+      font-size:26px;
+      font-weight:800;
+      margin:2px 0 10px;
+      letter-spacing:.5px;
+      text-align:center;
+      color:var(--text);
     }
 
     .plainBox{
-      padding2px 0 0;
+      padding:2px 0 0;
     }
 
     .infoBox{
-      border1.6px solid var(--border);
-      border-radius16px;
-      padding14px 16px;
-      background#FAF6F1;
+      border:1.6px solid var(--border);
+      border-radius:16px;
+      padding:14px 16px;
+      background:#FAF6F1;
     }
 
     .meta{
-      colorrgba(63,52,44,.9);
-      font-weight600;
-      line-height1.8;
-      text-alignleft;
+      color:rgba(63,52,44,.9);
+      font-weight:600;
+      line-height:1.8;
+      text-align:left;
     }
 
     .sectionTitle{
-      font-size22px;
-      font-weight900;
-      margin4px 0 10px;
-      letter-spacing.6px;
-      text-alignleft;
-      colorvar(--text);
+      font-size:22px;
+      font-weight:900;
+      margin:4px 0 10px;
+      letter-spacing:.6px;
+      text-align:left;
+      color:var(--text);
     }
 
     .subText{
-      colorvar(--muted);
-      font-weight600;
-      margin0 0 12px;
-      line-height1.7;
+      color:var(--muted);
+      font-weight:600;
+      margin:0 0 12px;
+      line-height:1.7;
     }
 
     .label{
-      font-size18px;
-      font-weight800;
-      margin16px 0 10px;
-      colorvar(--text);
+      font-size:18px;
+      font-weight:800;
+      margin:16px 0 10px;
+      color:var(--text);
     }
 
     .miniLabel{
-      margin0 0 8px;
-      font-size16px;
-      font-weight800;
-      colorvar(--text);
+      margin:0 0 8px;
+      font-size:16px;
+      font-weight:800;
+      color:var(--text);
     }
 
     .input{
-      width100%;
-      border1.6px solid var(--border);
-      border-radiusvar(--radius-sm);
-      padding14px 14px;
-      font-size18px;
-      font-weight600;
-      background#FCF8F3;
-      colorvar(--text);
-      outlinenone;
+      width:100%;
+      border:1.6px solid var(--border);
+      border-radius:var(--radius-sm);
+      padding:14px 14px;
+      font-size:18px;
+      font-weight:600;
+      background:#FCF8F3;
+      color:var(--text);
+      outline:none;
     }
 
-    .inputplaceholder{ colorrgba(63,52,44,.42); }
+    .input::placeholder{ color:rgba(63,52,44,.42); }
 
-    .inputfocus{
-      border-colorvar(--latte);
-      box-shadow0 0 0 4px rgba(139,115,95,.12);
+    .input:focus{
+      border-color:var(--latte);
+      box-shadow:0 0 0 4px rgba(139,115,95,.12);
     }
 
     .grid2{
-      displaygrid;
-      grid-template-columns1fr 1fr;
-      gap10px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
     }
 
     .grid3{
-      displaygrid;
-      grid-template-columnsrepeat(3, minmax(0, 1fr));
-      gap12px 20px;
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:12px 20px;
     }
 
-    @media (max-width560px){
-      .grid2{ grid-template-columns1fr; }
-      .grid3{ grid-template-columnsrepeat(2, minmax(0, 1fr)); }
+    @media (max-width:560px){
+      .grid2{ grid-template-columns:1fr; }
+      .grid3{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
     }
 
     .contractTitle{
-      font-size22px;
-      font-weight900;
-      margin0 0 12px;
-      letter-spacing.6px;
-      text-alignleft;
-      colorvar(--text);
+      font-size:22px;
+      font-weight:900;
+      margin:0 0 12px;
+      letter-spacing:.6px;
+      text-align:left;
+      color:var(--text);
     }
 
     .contractScrollCard{
-      border1.4px solid rgba(217,200,181,.95);
-      border-radius18px;
-      background#FAF6F1;
-      padding14px 14px;
-      max-height420px;
-      overflow-yauto;
-      overflow-xhidden;
+      border:1.4px solid rgba(217,200,181,.95);
+      border-radius:18px;
+      background:#FAF6F1;
+      padding:14px 14px;
+      max-height:420px;
+      overflow-y:auto;
+      overflow-x:hidden;
     }
 
-    .contractScrollCard-webkit-scrollbar{
-      width10px;
+    .contractScrollCard::-webkit-scrollbar{
+      width:10px;
     }
 
-    .contractScrollCard-webkit-scrollbar-thumb{
-      backgroundrgba(139,115,95,.35);
-      border-radius999px;
+    .contractScrollCard::-webkit-scrollbar-thumb{
+      background:rgba(139,115,95,.35);
+      border-radius:999px;
     }
 
-    .contractScrollCard-webkit-scrollbar-track{
-      backgroundrgba(217,200,181,.2);
-      border-radius999px;
+    .contractScrollCard::-webkit-scrollbar-track{
+      background:rgba(217,200,181,.2);
+      border-radius:999px;
     }
 
     .contractBox{
-      padding0;
-      text-alignleft;
+      padding:0;
+      text-align:left;
     }
 
     .contractBox pre{
-      margin0;
-      white-spacepre-wrap;
-      word-breakbreak-word;
-      line-height1.75;
-      font-size15px;
-      font-weight500;
-      colorrgba(63,52,44,.96);
-      text-alignleft;
+      margin:0;
+      white-space:pre-wrap;
+      word-break:break-word;
+      line-height:1.75;
+      font-size:15px;
+      font-weight:500;
+      color:rgba(63,52,44,.96);
+      text-align:left;
     }
 
     .checkRow{
-      displayflex;
-      gap12px;
-      align-itemsflex-start;
-      margin-top14px;
-      padding0;
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      margin-top:14px;
+      padding:0;
     }
 
     .checkRow input{
-      width22px;
-      height22px;
-      accent-colorvar(--latte);
-      margin-top2px;
-      flex-shrink0;
+      width:22px;
+      height:22px;
+      accent-color:var(--latte);
+      margin-top:2px;
+      flex-shrink:0;
     }
 
     .checkRow label{
-      font-size17px;
-      font-weight800;
-      colorvar(--text);
-      line-height1.5;
+      font-size:17px;
+      font-weight:800;
+      color:var(--text);
+      line-height:1.5;
     }
 
     .choiceRow{
-      displayflex;
-      gap14px;
-      flex-wrapwrap;
-      align-itemscenter;
-      padding0;
-      backgroundtransparent;
-      bordernone;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:center;
+      padding:0;
+      background:transparent;
+      border:none;
     }
 
     .choice{
-      displayflex;
-      gap8px;
-      align-itemscenter;
-      font-weight800;
-      min-height40px;
-      colorvar(--text);
+      display:flex;
+      gap:8px;
+      align-items:center;
+      font-weight:800;
+      min-height:40px;
+      color:var(--text);
     }
 
     .choice input{
-      width20px;
-      height20px;
-      accent-colorvar(--latte);
+      width:20px;
+      height:20px;
+      accent-color:var(--latte);
     }
 
     .checkGrid{
-      displaygrid;
-      grid-template-columnsrepeat(2, minmax(0, 1fr));
-      gap12px 24px;
-      padding0;
-      backgroundtransparent;
-      bordernone;
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:12px 24px;
+      padding:0;
+      background:transparent;
+      border:none;
     }
 
     .checkGrid.oneLine{
-      displayflex;
-      flex-wrapwrap;
-      gap14px 22px;
-      align-itemsflex-start;
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px 22px;
+      align-items:flex-start;
     }
 
     .serviceRow3{
-      displayflex;
-      flex-wrapwrap;
-      gap14px 22px;
-      align-itemsflex-start;
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px 22px;
+      align-items:flex-start;
     }
 
     .serviceRow3 .serviceOptionBlock{
-      min-width120px;
+      min-width:120px;
     }
 
     .ck{
-      displayflex;
-      align-itemscenter;
-      gap8px;
-      font-weight600;
-      font-size14px;
-      line-height1.4;
-      min-height28px;
-      colorvar(--text);
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-weight:600;
+      font-size:14px;
+      line-height:1.4;
+      min-height:28px;
+      color:var(--text);
     }
 
     .ck input{
-      width18px;
-      height18px;
-      accent-colorvar(--latte);
-      flex-shrink0;
+      width:18px;
+      height:18px;
+      accent-color:var(--latte);
+      flex-shrink:0;
     }
 
-    .fullRow{ grid-column1  -1; }
+    .fullRow{ grid-column:1 / -1; }
 
     .otherInputWrap{
-      displaynone;
-      margin-top10px;
+      display:none;
+      margin-top:10px;
     }
 
     .bodyCheckItem{
-      padding12px 0;
-      border-bottom1px solid rgba(217,200,181,.6);
+      padding:12px 0;
+      border-bottom:1px solid rgba(217,200,181,.6);
     }
 
-    .bodyCheckItemlast-child{
-      border-bottomnone;
-      padding-bottom0;
+    .bodyCheckItem:last-child{
+      border-bottom:none;
+      padding-bottom:0;
     }
 
     .bodyCheckHead{
-      font-weight800;
-      margin-bottom10px;
-      font-size16px;
-      colorvar(--text);
+      font-weight:800;
+      margin-bottom:10px;
+      font-size:16px;
+      color:var(--text);
     }
 
     .bodyCheckDetail{
-      displaynone;
-      margin-top10px;
+      display:none;
+      margin-top:10px;
     }
 
     .methodAmountWrap{
-      displaynone;
-      margin-top8px;
-      margin-left28px;
+      display:none;
+      margin-top:8px;
+      margin-left:28px;
     }
 
     .payMethodBlock + .payMethodBlock{
-      margin-top12px;
+      margin-top:12px;
     }
 
     .payHeader{
-      displayflex;
-      justify-contentspace-between;
-      align-itemsflex-end;
-      gap12px;
-      flex-wrapwrap;
-      margin-bottom10px;
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:10px;
     }
 
     .payTotal{
-      font-size16px;
-      font-weight900;
-      colorvar(--latte);
-      white-spacenowrap;
+      font-size:16px;
+      font-weight:900;
+      color:var(--latte);
+      white-space:nowrap;
     }
 
     .serviceOptionBlock{
-      displayflex;
-      flex-directioncolumn;
-      gap6px;
+      display:flex;
+      flex-direction:column;
+      gap:6px;
     }
 
     .serviceAmountWrap{
-      displaynone;
-      margin-left26px;
-      widthcalc(100% - 26px);
+      display:none;
+      margin-left:26px;
+      width:calc(100% - 26px);
     }
 
     .serviceAmountWrap.showInline{
-      displayblock;
+      display:block;
     }
 
     .serviceAmountWrap .input{
-      padding11px 12px;
-      font-size15px;
-      border-radius14px;
+      padding:11px 12px;
+      font-size:15px;
+      border-radius:14px;
     }
 
     .serviceAmountHint{
-      font-size12px;
-      colorvar(--muted);
-      font-weight700;
-      margin-bottom6px;
+      font-size:12px;
+      color:var(--muted);
+      font-weight:700;
+      margin-bottom:6px;
     }
 
     #sig{
-      width100%;
-      height320px;
-      border1.6px solid var(--border);
-      border-radiusvar(--radius-sm);
-      background#fff;
-      touch-actionnone;
+      width:100%;
+      height:320px;
+      border:1.6px solid var(--border);
+      border-radius:var(--radius-sm);
+      background:#fff;
+      touch-action:none;
     }
 
     .btn{
-      width100%;
-      bordernone;
-      border-radius18px;
-      padding15px 16px;
-      font-size18px;
-      font-weight900;
-      cursorpointer;
-      margin-top12px;
-      letter-spacing.3px;
-      box-shadow0 10px 20px rgba(73,58,46,.10);
-      transition.15s ease;
+      width:100%;
+      border:none;
+      border-radius:18px;
+      padding:15px 16px;
+      font-size:18px;
+      font-weight:900;
+      cursor:pointer;
+      margin-top:12px;
+      letter-spacing:.3px;
+      box-shadow:0 10px 20px rgba(73,58,46,.10);
+      transition:.15s ease;
     }
 
-    .btnactive{ transformscale(.98); }
-    .btndisabled{ opacity.72; cursornot-allowed; }
-    .btnClear{ backgroundvar(--soft-2); colorvar(--text); }
-    .btnSubmit{ backgroundvar(--latte); color#fff; }
+    .btn:active{ transform:scale(.98); }
+    .btn:disabled{ opacity:.72; cursor:not-allowed; }
+    .btnClear{ background:var(--soft-2); color:var(--text); }
+    .btnSubmit{ background:var(--latte); color:#fff; }
 
     .msg{
-      margin-top10px;
-      colorvar(--danger);
-      font-weight900;
-      text-aligncenter;
-      line-height1.6;
-      white-spacepre-line;
+      margin-top:10px;
+      color:var(--danger);
+      font-weight:900;
+      text-align:center;
+      line-height:1.6;
+      white-space:pre-line;
     }
 
     .dangerNote{
-      margin-top10px;
-      colorvar(--muted);
-      font-weight800;
-      font-size14px;
-      text-aligncenter;
+      margin-top:10px;
+      color:var(--muted);
+      font-weight:800;
+      font-size:14px;
+      text-align:center;
     }
 
-    .hidden{ displaynone !important; }
-  style
-head
+    .hidden{ display:none !important; }
+  </style>
+</head>
 
-body
-  div class=wrap
+<body>
+  <div class="wrap">
 
-    div class=card
-      div class=logoBox
-        img src=logo.png alt=店家 LOGO
-      div
+    <div class="card">
+      <div class="logoBox">
+        <img src="logo.png" alt="店家 LOGO">
+      </div>
 
-      div class=title寵物美容服務定型化契約div
+      <div class="title">寵物美容服務定型化契約</div>
 
-      div class=infoBox
-        div class=meta
-          公司名稱：熊汪寵物美容br
-          營業地址：高雄市苓雅區正義路150號br
+      <div class="infoBox">
+        <div class="meta">
+          公司名稱：熊汪寵物美容<br>
+          營業地址：高雄市苓雅區正義路150號<br>
           官方LINE：@911xgwmz
-        div
-      div
-    div
+        </div>
+      </div>
+    </div>
 
-    div class=card
-      div class=contractTitle契約內容（請完整閱讀）div
+    <div class="card">
+      <div class="contractTitle">契約內容（請完整閱讀）</div>
 
-      div class=contractScrollCard
-        div class=contractBox
-          pre id=contractText為保障毛孩的安全與您的權益，
+      <div class="contractScrollCard">
+        <div class="contractBox">
+          <pre id="contractText">為保障毛孩的安全與您的權益，
 本店採用犬、貓美容服務定型化契約。
 請您於簽署前詳閱契約內容，
 了解雙方之權利義務及相關服務事項。
@@ -528,18 +528,19 @@ body
 但犬、貓未辦理寵物登記者，得提供其他足以辨識個體身分之資訊。
 (二)甲方：
 1. 姓名：
-2. 通訊地址：
-3. 聯絡電話：
-4. 緊急聯絡人：
-5. 緊急聯絡人之聯絡電話：
-6. 犬、貓需緊急就醫時指定之獸醫診療場所
+2. 國民身分證統一編號/居留證號碼：
+3. 通訊地址：
+4. 聯絡電話：
+5. 緊急聯絡人：
+6. 緊急聯絡人之聯絡電話：
+7. 犬、貓需緊急就醫時指定之獸醫診療場所
 (三)乙方：
 1. 公司或商號名稱：熊汪寵物美容
 2. 代表人或負責人姓名：黃淑婷
 　　統一編號：85550862
 　　特寵業字第W1130960-00號
 3. 營業地址：高雄市苓雅區正義路150號
-4. 營業時間：1000-1900
+4. 營業時間：10:00-19:00
 5. 聯絡電話：07-7405877
 6. 犬、貓需緊急就醫時如無指定，送交之獸醫診療場所
 
@@ -625,10 +626,11 @@ body
 本契約之附件「寵物基本資料及健康狀況填寫表」（包含但不限於寵物基本資料、健康狀況、個性傾向、病史、服務項目及相關告知事項），
 為本契約之一部分，與本契約具有同一之效力。甲方確認已於簽訂本契約前，依乙方之說明完整填寫前述附件，並同意其內容作為乙方評估是否提供犬、貓美容服務及服務方式之依據。前述附件得以書面、電子文件、拍照、掃描或其他可供日後查證之方式留存，均視為有效。
 
-———————————————————————————————————
+———————————————————————————
 立契約書人
 甲方（消費者）
 姓名：
+國民身分證統一編號或居留證號碼：
 聯絡電話：
 地址：
 
@@ -638,658 +640,661 @@ body
 統一編號：85550862
 特寵業字第W1130960-00號
 營業地址：高雄市苓雅區正義路150號
-營業時間：1000-1900
+營業時間：10:00-19:00
 聯絡電話：07-7405877
-pre
-        div
-      div
+</pre>
+        </div>
+      </div>
 
-      div class=checkRow
-        input id=agree type=checkbox
-        label for=agree我已完整閱讀並同意上述契約內容label
-      div
-    div
+      <div class="checkRow">
+        <input id="agree" type="checkbox">
+        <label for="agree">我已完整閱讀並同意上述契約內容</label>
+      </div>
+    </div>
 
-    div class=card
-      div class=sectionTitle基本資料表div
-      div class=subText以下資料將作為契約附件之一部分div
+    <div class="card">
+      <div class="sectionTitle">基本資料表</div>
+      <div class="subText">以下資料將作為契約附件之一部分</div>
 
-      div class=label甲方姓名（飼主）div
-      input id=ownerName class=input placeholder=請輸入飼主姓名
+      <div class="label">甲方姓名（飼主）</div>
+      <input id="ownerName" class="input" placeholder="請輸入飼主姓名">
 
-      div class=label聯絡電話div
-      input id=ownerPhone class=input inputmode=tel placeholder=請輸入聯絡電話
+      <div class="label">身分證字號</div>
+      <input id="ownerIdNo" class="input" placeholder="請輸入身分證字號">
 
-      div class=label通訊地址div
-      input id=ownerAddress class=input placeholder=請輸入通訊地址
+      <div class="label">聯絡電話</div>
+      <input id="ownerPhone" class="input" inputmode="tel" placeholder="請輸入聯絡電話">
 
-      div class=grid2 style=margin-top10px;
-        div
-          div class=miniLabel緊急聯絡人div
-          input id=emergencyName class=input placeholder=請輸入緊急聯絡人姓名
-        div
-        div
-          div class=miniLabel緊急聯絡人電話div
-          input id=emergencyPhone class=input inputmode=tel placeholder=請輸入緊急聯絡人電話
-        div
-      div
+      <div class="label">通訊地址</div>
+      <input id="ownerAddress" class="input" placeholder="請輸入通訊地址">
 
-      div class=labelEmail（寄送附本用）div
-      input id=ownerEmail class=input inputmode=email placeholder=例：abc@gmail.com
+      <div class="grid2" style="margin-top:10px;">
+        <div>
+          <div class="miniLabel">緊急聯絡人</div>
+          <input id="emergencyName" class="input" placeholder="請輸入緊急聯絡人姓名">
+        </div>
+        <div>
+          <div class="miniLabel">緊急聯絡人電話</div>
+          <input id="emergencyPhone" class="input" inputmode="tel" placeholder="請輸入緊急聯絡人電話">
+        </div>
+      </div>
 
-      div class=label是否為飼主本人div
-      div class=choiceRow id=isOwnerSelfRow
-        label class=choiceinput type=radio name=isOwnerSelf value=是 checked是label
-        label class=choiceinput type=radio name=isOwnerSelf value=否否label
-      div
+      <div class="label">Email（寄送附本用）</div>
+      <input id="ownerEmail" class="input" inputmode="email" placeholder="例：abc@gmail.com">
 
-      div id=ownerRelationWrap class=hidden
-        div class=label與飼主關係div
-        input id=ownerRelation class=input placeholder=例：家人  朋友  代送
-      div
+      <div class="label">是否為飼主本人</div>
+      <div class="choiceRow" id="isOwnerSelfRow">
+        <label class="choice"><input type="radio" name="isOwnerSelf" value="是" checked>是</label>
+        <label class="choice"><input type="radio" name="isOwnerSelf" value="否">否</label>
+      </div>
 
-      div class=label寵物姓名div
-      input id=petName class=input placeholder=請輸入寵物姓名
+      <div id="ownerRelationWrap" class="hidden">
+        <div class="label">與飼主關係</div>
+        <input id="ownerRelation" class="input" placeholder="例：家人 / 朋友 / 代送">
+      </div>
 
-      div class=label寵物品種div
-      input id=petBreed class=input placeholder=例：比熊犬
+      <div class="label">寵物姓名</div>
+      <input id="petName" class="input" placeholder="請輸入寵物姓名">
 
-      div class=grid2 style=margin-top10px;
-        div
-          div class=miniLabel性別div
-          div class=choiceRow id=petSexRow
-            label class=choiceinput type=radio name=petSex value=男生 checked男生label
-            label class=choiceinput type=radio name=petSex value=女生女生label
-          div
-        div
-        div
-          div class=miniLabel種類div
-          div class=choiceRow id=petTypeRow
-            label class=choiceinput type=radio name=petType value=犬 checked犬label
-            label class=choiceinput type=radio name=petType value=貓貓label
-          div
-        div
-      div
+      <div class="label">寵物品種</div>
+      <input id="petBreed" class="input" placeholder="例：比熊犬">
 
-      div class=grid2 style=margin-top10px;
-        div
-          div class=miniLabel寵物年齡div
-          input id=petAge class=input inputmode=numeric pattern=[0-9] placeholder=例：3
-        div
-        div
-          div class=miniLabel寵物生日div
-          input id=petBirthday class=input js-date type=text inputmode=numeric placeholder=YYYYMMDD maxlength=10
-        div
-      div
+      <div class="grid2" style="margin-top:10px;">
+        <div>
+          <div class="miniLabel">性別</div>
+          <div class="choiceRow" id="petSexRow">
+            <label class="choice"><input type="radio" name="petSex" value="男生" checked>男生</label>
+            <label class="choice"><input type="radio" name="petSex" value="女生">女生</label>
+          </div>
+        </div>
+        <div>
+          <div class="miniLabel">種類</div>
+          <div class="choiceRow" id="petTypeRow">
+            <label class="choice"><input type="radio" name="petType" value="犬" checked>犬</label>
+            <label class="choice"><input type="radio" name="petType" value="貓">貓</label>
+          </div>
+        </div>
+      </div>
 
-      div class=label晶片div
-      div class=choiceRow id=chipRow
-        label class=choiceinput type=radio name=chipHas value=有 checked有label
-        label class=choiceinput type=radio name=chipHas value=無無label
-      div
+      <div class="grid2" style="margin-top:10px;">
+        <div>
+          <div class="miniLabel">寵物年齡</div>
+          <input id="petAge" class="input" inputmode="numeric" pattern="[0-9]*" placeholder="例：3">
+        </div>
+        <div>
+          <div class="miniLabel">寵物生日</div>
+          <input id="petBirthday" class="input js-date" type="text" inputmode="numeric" placeholder="YYYY/MM/DD" maxlength="10">
+        </div>
+      </div>
 
-      div id=chipNoWrap class=hidden
-        div class=label晶片號碼 span style=colorvar(--muted); font-weight700; font-size14px;（選填）spandiv
-        input id=chipNo class=input inputmode=numeric pattern=[0-9] placeholder=晶片號碼
-      div
+      <div class="label">晶片</div>
+      <div class="choiceRow" id="chipRow">
+        <label class="choice"><input type="radio" name="chipHas" value="有" checked>有</label>
+        <label class="choice"><input type="radio" name="chipHas" value="無">無</label>
+      </div>
 
-      div class=label絕育狀況div
-      div class=choiceRow id=neuterRow
-        label class=choiceinput type=radio name=neuterStatus value=已絕育 checked已絕育label
-        label class=choiceinput type=radio name=neuterStatus value=未絕育未絕育label
-      div
+      <div id="chipNoWrap" class="hidden">
+        <div class="label">晶片號碼 <span style="color:var(--muted); font-weight:700; font-size:14px;">（選填）</span></div>
+        <input id="chipNo" class="input" inputmode="numeric" pattern="[0-9]*" placeholder="晶片號碼">
+      </div>
 
-      div class=label體重（公斤）div
-      input id=petWeight class=input inputmode=decimal placeholder=例：6.5
+      <div class="label">絕育狀況</div>
+      <div class="choiceRow" id="neuterRow">
+        <label class="choice"><input type="radio" name="neuterStatus" value="已絕育" checked>已絕育</label>
+        <label class="choice"><input type="radio" name="neuterStatus" value="未絕育">未絕育</label>
+      </div>
 
-      div class=label寵物個性（可複選）div
-      div class=checkGrid id=temperamentGrid
-        label class=ckinput type=checkbox class=pt value=親人親人label
-        label class=ckinput type=checkbox class=pt value=不親人不親人label
-        label class=ckinput type=checkbox class=pt value=親狗親狗label
-        label class=ckinput type=checkbox class=pt value=不親狗不親狗label
-        label class=ckinput type=checkbox class=pt value=不會咬人不會咬人label
-        label class=ckinput type=checkbox class=pt value=會咬人會咬人label
-        label class=ckinput type=checkbox class=pt value=不會咬狗不會咬狗label
-        label class=ckinput type=checkbox class=pt value=會咬狗會咬狗label
-        label class=ckinput type=checkbox class=pt value=容易緊張容易緊張label
-        label class=ckinput type=checkbox class=pt value=過度焦慮過度焦慮label
-      div
+      <div class="label">體重（公斤）</div>
+      <input id="petWeight" class="input" inputmode="decimal" placeholder="例：6.5">
 
-      div style=margin-top10px;
-        div class=miniLabel其他應注意（選填）div
-        input id=petTemperamentNote class=input placeholder=例如：怕吹風、不喜歡剪磨指甲等
-      div
+      <div class="label">寵物個性（可複選）</div>
+      <div class="checkGrid" id="temperamentGrid">
+        <label class="ck"><input type="checkbox" class="pt" value="親人">親人</label>
+        <label class="ck"><input type="checkbox" class="pt" value="不親人">不親人</label>
+        <label class="ck"><input type="checkbox" class="pt" value="親狗">親狗</label>
+        <label class="ck"><input type="checkbox" class="pt" value="不親狗">不親狗</label>
+        <label class="ck"><input type="checkbox" class="pt" value="不會咬人">不會咬人</label>
+        <label class="ck"><input type="checkbox" class="pt" value="會咬人">會咬人</label>
+        <label class="ck"><input type="checkbox" class="pt" value="不會咬狗">不會咬狗</label>
+        <label class="ck"><input type="checkbox" class="pt" value="會咬狗">會咬狗</label>
+        <label class="ck"><input type="checkbox" class="pt" value="容易緊張">容易緊張</label>
+        <label class="ck"><input type="checkbox" class="pt" value="過度焦慮">過度焦慮</label>
+      </div>
 
-      div class=label寵物身體狀況檢視（目視）div
+      <div style="margin-top:10px;">
+        <div class="miniLabel">其他應注意（選填）</div>
+        <input id="petTemperamentNote" class="input" placeholder="例如：怕吹風、不喜歡剪磨指甲等">
+      </div>
 
-      div class=plainBox style=margin-top6px;
-        div class=bodyCheckItem
-          div class=bodyCheckHead眼睛div
-          div class=choiceRow
-            label class=choiceinput type=radio name=body_eyes value=正常 checked正常label
-            label class=choiceinput type=radio name=body_eyes value=異常異常label
-          div
-          div class=bodyCheckDetail
-            input class=input id=bodyDetail_eyes placeholder=請填寫眼睛異常狀況（選填）
-          div
-        div
+      <div class="label">寵物身體狀況檢視（目視）</div>
 
-        div class=bodyCheckItem
-          div class=bodyCheckHead牙齒div
-          div class=choiceRow
-            label class=choiceinput type=radio name=body_teeth value=正常 checked正常label
-            label class=choiceinput type=radio name=body_teeth value=異常異常label
-          div
-          div class=bodyCheckDetail
-            input class=input id=bodyDetail_teeth placeholder=請填寫牙齒異常狀況（選填）
-          div
-        div
+      <div class="plainBox" style="margin-top:6px;">
+        <div class="bodyCheckItem">
+          <div class="bodyCheckHead">眼睛</div>
+          <div class="choiceRow">
+            <label class="choice"><input type="radio" name="body_eyes" value="正常" checked>正常</label>
+            <label class="choice"><input type="radio" name="body_eyes" value="異常">異常</label>
+          </div>
+          <div class="bodyCheckDetail">
+            <input class="input" id="bodyDetail_eyes" placeholder="請填寫眼睛異常狀況（選填）">
+          </div>
+        </div>
 
-        div class=bodyCheckItem
-          div class=bodyCheckHead耳朵div
-          div class=choiceRow
-            label class=choiceinput type=radio name=body_ears value=正常 checked正常label
-            label class=choiceinput type=radio name=body_ears value=異常異常label
-          div
-          div class=bodyCheckDetail
-            input class=input id=bodyDetail_ears placeholder=請填寫耳朵異常狀況（選填）
-          div
-        div
+        <div class="bodyCheckItem">
+          <div class="bodyCheckHead">牙齒</div>
+          <div class="choiceRow">
+            <label class="choice"><input type="radio" name="body_teeth" value="正常" checked>正常</label>
+            <label class="choice"><input type="radio" name="body_teeth" value="異常">異常</label>
+          </div>
+          <div class="bodyCheckDetail">
+            <input class="input" id="bodyDetail_teeth" placeholder="請填寫牙齒異常狀況（選填）">
+          </div>
+        </div>
 
-        div class=bodyCheckItem
-          div class=bodyCheckHead四肢div
-          div class=choiceRow
-            label class=choiceinput type=radio name=body_limbs value=正常 checked正常label
-            label class=choiceinput type=radio name=body_limbs value=異常異常label
-          div
-          div class=bodyCheckDetail
-            input class=input id=bodyDetail_limbs placeholder=請填寫四肢異常狀況（選填）
-          div
-        div
+        <div class="bodyCheckItem">
+          <div class="bodyCheckHead">耳朵</div>
+          <div class="choiceRow">
+            <label class="choice"><input type="radio" name="body_ears" value="正常" checked>正常</label>
+            <label class="choice"><input type="radio" name="body_ears" value="異常">異常</label>
+          </div>
+          <div class="bodyCheckDetail">
+            <input class="input" id="bodyDetail_ears" placeholder="請填寫耳朵異常狀況（選填）">
+          </div>
+        </div>
 
-        div class=bodyCheckItem
-          div class=bodyCheckHead皮膚div
-          div class=choiceRow
-            label class=choiceinput type=radio name=body_skin value=正常 checked正常label
-            label class=choiceinput type=radio name=body_skin value=異常異常label
-          div
-          div class=bodyCheckDetail
-            input class=input id=bodyDetail_skin placeholder=請填寫皮膚異常狀況（選填）
-          div
-        div
+        <div class="bodyCheckItem">
+          <div class="bodyCheckHead">四肢</div>
+          <div class="choiceRow">
+            <label class="choice"><input type="radio" name="body_limbs" value="正常" checked>正常</label>
+            <label class="choice"><input type="radio" name="body_limbs" value="異常">異常</label>
+          </div>
+          <div class="bodyCheckDetail">
+            <input class="input" id="bodyDetail_limbs" placeholder="請填寫四肢異常狀況（選填）">
+          </div>
+        </div>
 
-        div class=bodyCheckItem
-          div class=bodyCheckHead皮毛div
-          div class=choiceRow
-            label class=choiceinput type=radio name=body_coat value=正常 checked正常label
-            label class=choiceinput type=radio name=body_coat value=異常異常label
-          div
-          div class=bodyCheckDetail
-            input class=input id=bodyDetail_coat placeholder=請填寫皮毛異常狀況（選填，例如：打結、跳蚤壁蝨）
-          div
-        div
-      div
+        <div class="bodyCheckItem">
+          <div class="bodyCheckHead">皮膚</div>
+          <div class="choiceRow">
+            <label class="choice"><input type="radio" name="body_skin" value="正常" checked>正常</label>
+            <label class="choice"><input type="radio" name="body_skin" value="異常">異常</label>
+          </div>
+          <div class="bodyCheckDetail">
+            <input class="input" id="bodyDetail_skin" placeholder="請填寫皮膚異常狀況（選填）">
+          </div>
+        </div>
 
-      div class=label寵物病史div
-      div class=checkGrid id=medicalGrid
-        label class=ck fullRowinput type=checkbox id=mh_none value=狀況良好，無病史狀況良好，無病史label
-        label class=ckinput type=checkbox class=mh value=心臟病心臟病label
-        label class=ckinput type=checkbox class=mh value=氣喘氣喘label
-        label class=ckinput type=checkbox class=mh value=氣管塌陷氣管塌陷label
-        label class=ckinput type=checkbox class=mh value=白內障白內障label
-        label class=ckinput type=checkbox class=mh value=癲癇癲癇label
-        label class=ckinput type=checkbox class=mh value=心絲蟲心絲蟲label
-        label class=ckinput type=checkbox class=mh value=艾利希體艾利希體label
-        label class=ckinput type=checkbox class=mh value=腹膜炎腹膜炎label
-        label class=ckinput type=checkbox class=mh value=腹積水腹積水label
-        label class=ckinput type=checkbox class=mh value=手術外傷未癒合手術外傷未癒合label
-        label class=ckinput type=checkbox class=mh value=髖關節問題髖關節問題label
-        label class=ckinput type=checkbox class=mh value=骨折骨折label
-        label class=ckinput type=checkbox class=mh value=腸炎腸炎label
-        label class=ckinput type=checkbox class=mh value=血便血便label
-        label class=ckinput type=checkbox class=mh value=血尿血尿label
-        label class=ckinput type=checkbox class=mh value=懷孕懷孕label
-        label class=ckinput type=checkbox class=mh value=傳染疾病傳染疾病label
-        label class=ckinput type=checkbox class=mh value=耳朵發炎耳朵發炎label
-        label class=ckinput type=checkbox class=mh value=肥胖肥胖label
-        label class=ck fullRowinput type=checkbox class=mh id=otherInjury value=其他應注意其他應注意label
-      div
+        <div class="bodyCheckItem">
+          <div class="bodyCheckHead">皮毛</div>
+          <div class="choiceRow">
+            <label class="choice"><input type="radio" name="body_coat" value="正常" checked>正常</label>
+            <label class="choice"><input type="radio" name="body_coat" value="異常">異常</label>
+          </div>
+          <div class="bodyCheckDetail">
+            <input class="input" id="bodyDetail_coat" placeholder="請填寫皮毛異常狀況（選填，例如：打結、跳蚤壁蝨）">
+          </div>
+        </div>
+      </div>
 
-      div id=otherInjuryWrap class=otherInputWrap
-        input id=otherInjuryText class=input type=text placeholder=請填寫其他應注意事項
-      div
+      <div class="label">寵物病史</div>
+      <div class="checkGrid" id="medicalGrid">
+        <label class="ck fullRow"><input type="checkbox" id="mh_none" value="狀況良好，無病史">狀況良好，無病史</label>
+        <label class="ck"><input type="checkbox" class="mh" value="心臟病">心臟病</label>
+        <label class="ck"><input type="checkbox" class="mh" value="氣喘">氣喘</label>
+        <label class="ck"><input type="checkbox" class="mh" value="氣管塌陷">氣管塌陷</label>
+        <label class="ck"><input type="checkbox" class="mh" value="白內障">白內障</label>
+        <label class="ck"><input type="checkbox" class="mh" value="癲癇">癲癇</label>
+        <label class="ck"><input type="checkbox" class="mh" value="心絲蟲">心絲蟲</label>
+        <label class="ck"><input type="checkbox" class="mh" value="艾利希體">艾利希體</label>
+        <label class="ck"><input type="checkbox" class="mh" value="腹膜炎">腹膜炎</label>
+        <label class="ck"><input type="checkbox" class="mh" value="腹積水">腹積水</label>
+        <label class="ck"><input type="checkbox" class="mh" value="手術外傷未癒合">手術外傷未癒合</label>
+        <label class="ck"><input type="checkbox" class="mh" value="髖關節問題">髖關節問題</label>
+        <label class="ck"><input type="checkbox" class="mh" value="骨折">骨折</label>
+        <label class="ck"><input type="checkbox" class="mh" value="腸炎">腸炎</label>
+        <label class="ck"><input type="checkbox" class="mh" value="血便">血便</label>
+        <label class="ck"><input type="checkbox" class="mh" value="血尿">血尿</label>
+        <label class="ck"><input type="checkbox" class="mh" value="懷孕">懷孕</label>
+        <label class="ck"><input type="checkbox" class="mh" value="傳染疾病">傳染疾病</label>
+        <label class="ck"><input type="checkbox" class="mh" value="耳朵發炎">耳朵發炎</label>
+        <label class="ck"><input type="checkbox" class="mh" value="肥胖">肥胖</label>
+        <label class="ck fullRow"><input type="checkbox" class="mh" id="otherInjury" value="其他應注意">其他應注意</label>
+      </div>
 
-      div class=subText style=margin-top10px; colorvar(--text); font-weight800;
+      <div id="otherInjuryWrap" class="otherInputWrap">
+        <input id="otherInjuryText" class="input" type="text" placeholder="請填寫其他應注意事項">
+      </div>
+
+      <div class="subText" style="margin-top:10px; color:var(--text); font-weight:800;">
         飼主應盡告知義務，若因隱瞞病況發生意外或死亡，經法定程序判定店家無疏失，店家不負損害賠償責任。
-      div
+      </div>
 
-      div class=label緊急就醫機構div
-      div class=choiceRow id=vetModeRow
-        label class=choiceinput type=radio name=vetMode value=甲方指定 checked甲方指定label
-        label class=choiceinput type=radio name=vetMode value=乙方指定乙方指定鄰近動物醫院label
-      div
+      <div class="label">緊急就醫機構</div>
+      <div class="choiceRow" id="vetModeRow">
+        <label class="choice"><input type="radio" name="vetMode" value="甲方指定" checked>甲方指定</label>
+        <label class="choice"><input type="radio" name="vetMode" value="乙方指定">乙方指定鄰近動物醫院</label>
+      </div>
 
-      div id=vetDetailWrap
-        div class=grid2 style=margin-top10px;
-          div
-            div class=miniLabel動物醫院名稱div
-            input id=vetName class=input placeholder=請輸入動物醫院名稱
-          div
-          div
-            div class=miniLabel動物醫院電話div
-            input id=vetPhone class=input inputmode=tel placeholder=請輸入電話
-          div
-        div
+      <div id="vetDetailWrap">
+        <div class="grid2" style="margin-top:10px;">
+          <div>
+            <div class="miniLabel">動物醫院名稱</div>
+            <input id="vetName" class="input" placeholder="請輸入動物醫院名稱">
+          </div>
+          <div>
+            <div class="miniLabel">動物醫院電話</div>
+            <input id="vetPhone" class="input" inputmode="tel" placeholder="請輸入電話">
+          </div>
+        </div>
 
-        div style=margin-top10px;
-          div class=miniLabel動物醫院地址div
-          input id=vetAddress class=input placeholder=請輸入地址
-        div
-      div
-    div
+        <div style="margin-top:10px;">
+          <div class="miniLabel">動物醫院地址</div>
+          <input id="vetAddress" class="input" placeholder="請輸入地址">
+        </div>
+      </div>
+    </div>
 
-    div class=card
-      div class=sectionTitle服務內容div
+    <div class="card">
+      <div class="sectionTitle">服務內容</div>
 
-      div class=label洗澡div
-      div class=checkGrid oneLine
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcWash svcAmountToggle value=洗澡 data-amount-target=svcWashAmt0
+      <div class="label">洗澡</div>
+      <div class="checkGrid oneLine">
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcWash svcAmountToggle" value="洗澡" data-amount-target="svcWashAmt0">
             洗澡
-          label
-          div id=svcWashAmt0 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcWashAmt0" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcWash svcAmountToggle value=廢毛 data-amount-target=svcWashAmt1
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcWash svcAmountToggle" value="廢毛" data-amount-target="svcWashAmt1">
             廢毛
-          label
-          div id=svcWashAmt1 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcWashAmt1" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcWash svcAmountToggle value=打結 data-amount-target=svcWashAmt2
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcWash svcAmountToggle" value="打結" data-amount-target="svcWashAmt2">
             打結
-          label
-          div id=svcWashAmt2 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcWashAmt2" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox id=svcWashOther class=svcAmountToggle value=其他 data-amount-target=svcWashOtherWrap
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" id="svcWashOther" class="svcAmountToggle" value="其他" data-amount-target="svcWashOtherWrap">
             其他
-          label
-        div
-      div
+          </label>
+        </div>
+      </div>
 
-      div id=svcWashOtherWrap class=otherInputWrap
-        input id=svcWashOtherText class=input type=text placeholder=請填寫其他洗澡服務內容
-        div class=serviceAmountWrap showInline style=margin-top8px;
-          div class=serviceAmountHint金額（選填）div
-          input id=svcWashOtherAmount class=input js-currency inputmode=numeric placeholder=請輸入金額
-        div
-      div
+      <div id="svcWashOtherWrap" class="otherInputWrap">
+        <input id="svcWashOtherText" class="input" type="text" placeholder="請填寫其他洗澡服務內容">
+        <div class="serviceAmountWrap showInline" style="margin-top:8px;">
+          <div class="serviceAmountHint">金額（選填）</div>
+          <input id="svcWashOtherAmount" class="input js-currency" inputmode="numeric" placeholder="請輸入金額">
+        </div>
+      </div>
 
-      div class=subText style=margin-top10px; colorvar(--text);
+      <div class="subText" style="margin-top:10px; color:var(--text);">
         洗澡包含：剪指甲、清耳朵、腳底毛、肛門清潔、修腳緣、眼睛周圍毛髮修剪以不遮蓋眼睛為主（部分品種不適用改屁股雜毛修剪）
-      div
+      </div>
 
-      div class=label大美容（含洗澡）div
-      div class=checkGrid
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcGroom svcAmountToggle value=3分留頭尾 data-amount-target=svcGroomAmt1
+      <div class="label">大美容（含洗澡）</div>
+      <div class="checkGrid">
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcGroom svcAmountToggle" value="3分留頭尾" data-amount-target="svcGroomAmt1">
             3分留頭尾
-          label
-          div id=svcGroomAmt1 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcGroomAmt1" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcGroom svcAmountToggle value=6分留頭尾 data-amount-target=svcGroomAmt2
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcGroom svcAmountToggle" value="6分留頭尾" data-amount-target="svcGroomAmt2">
             6分留頭尾
-          label
-          div id=svcGroomAmt2 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcGroomAmt2" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcGroom svcAmountToggle value=9分留頭尾+100元 data-amount-target=svcGroomAmt3
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcGroom svcAmountToggle" value="9分留頭尾+100元" data-amount-target="svcGroomAmt3">
             9分留頭尾+100元
-          label
-          div id=svcGroomAmt3 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcGroomAmt3" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcGroom svcAmountToggle value=半手剪留腳柱 data-amount-target=svcGroomAmt4
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcGroom svcAmountToggle" value="半手剪留腳柱" data-amount-target="svcGroomAmt4">
             半手剪留腳柱
-          label
-          div id=svcGroomAmt4 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcGroomAmt4" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock fullRow
-          label class=ck
-            input type=checkbox class=svcGroom svcAmountToggle value=全手剪（現場討論造型） data-amount-target=svcGroomAmt5
+        <div class="serviceOptionBlock fullRow">
+          <label class="ck">
+            <input type="checkbox" class="svcGroom svcAmountToggle" value="全手剪（現場討論造型）" data-amount-target="svcGroomAmt5">
             全手剪（現場討論造型）
-          label
-          div id=svcGroomAmt5 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
-      div
+          </label>
+          <div id="svcGroomAmt5" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
+      </div>
 
-      div class=labelSPAdiv
-      div class=serviceRow3
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcSpa svcAmountToggle value=草本泥 data-amount-target=svcSpaAmt1
+      <div class="label">SPA</div>
+      <div class="serviceRow3">
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcSpa svcAmountToggle" value="草本泥" data-amount-target="svcSpaAmt1">
             草本泥
-          label
-          div id=svcSpaAmt1 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcSpaAmt1" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcSpa svcAmountToggle value=草本泥輕保養 data-amount-target=svcSpaAmt2
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcSpa svcAmountToggle" value="草本泥輕保養" data-amount-target="svcSpaAmt2">
             草本泥輕保養
-          label
-          div id=svcSpaAmt2 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcSpaAmt2" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcSpa svcAmountToggle value=臭氧 data-amount-target=svcSpaAmt3
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcSpa svcAmountToggle" value="臭氧" data-amount-target="svcSpaAmt3">
             臭氧
-          label
-          div id=svcSpaAmt3 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcSpaAmt3" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcSpa svcAmountToggle value=碳酸 data-amount-target=svcSpaAmt4
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcSpa svcAmountToggle" value="碳酸" data-amount-target="svcSpaAmt4">
             碳酸
-          label
-          div id=svcSpaAmt4 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcSpaAmt4" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcSpa svcAmountToggle value=皮膚調理 data-amount-target=svcSpaAmt5
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcSpa svcAmountToggle" value="皮膚調理" data-amount-target="svcSpaAmt5">
             皮膚調理
-          label
-          div id=svcSpaAmt5 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
-      div
+          </label>
+          <div id="svcSpaAmt5" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
+      </div>
 
-      div class=label單次項目div
-      div class=serviceRow3
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcSingle svcAmountToggle value=剪指甲 data-amount-target=svcSingleAmt1
+      <div class="label">單次項目</div>
+      <div class="serviceRow3">
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcSingle svcAmountToggle" value="剪指甲" data-amount-target="svcSingleAmt1">
             剪指甲
-          label
-          div id=svcSingleAmt1 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcSingleAmt1" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcSingle svcAmountToggle value=清耳朵 data-amount-target=svcSingleAmt2
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcSingle svcAmountToggle" value="清耳朵" data-amount-target="svcSingleAmt2">
             清耳朵
-          label
-          div id=svcSingleAmt2 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcSingleAmt2" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcSingle svcAmountToggle value=刷牙 data-amount-target=svcSingleAmt3
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcSingle svcAmountToggle" value="刷牙" data-amount-target="svcSingleAmt3">
             刷牙
-          label
-          div id=svcSingleAmt3 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcSingleAmt3" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcSingle svcAmountToggle value=貴賓腳 data-amount-target=svcSingleAmt4
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcSingle svcAmountToggle" value="貴賓腳" data-amount-target="svcSingleAmt4">
             貴賓腳
-          label
-          div id=svcSingleAmt4 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcSingleAmt4" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcSingle svcAmountToggle value=腳底毛 data-amount-target=svcSingleAmt5
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcSingle svcAmountToggle" value="腳底毛" data-amount-target="svcSingleAmt5">
             腳底毛
-          label
-          div id=svcSingleAmt5 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
+          </label>
+          <div id="svcSingleAmt5" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcSingle svcAmountToggle value=頭部大修 data-amount-target=svcSingleAmt6
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcSingle svcAmountToggle" value="頭部大修" data-amount-target="svcSingleAmt6">
             頭部大修
-          label
-          div id=svcSingleAmt6 class=serviceAmountWrap
-            div class=serviceAmountHint金額（選填）div
-            input class=input js-currency svcAmountInput inputmode=numeric placeholder=請輸入金額
-          div
-        div
-      div
+          </label>
+          <div id="svcSingleAmt6" class="serviceAmountWrap">
+            <div class="serviceAmountHint">金額（選填）</div>
+            <input class="input js-currency svcAmountInput" inputmode="numeric" placeholder="請輸入金額">
+          </div>
+        </div>
+      </div>
 
-      div class=label住宿div
-      div class=grid2 style=margin-top10px;
-        div
-          div class=miniLabel入住div
-          input id=stayCheckin class=input js-date inputmode=numeric placeholder=YYYYMMDD maxlength=10
-        div
-        div
-          div class=miniLabel退宿div
-          input id=stayCheckout class=input js-date inputmode=numeric placeholder=YYYYMMDD maxlength=10
-        div
-      div
+      <div class="label">住宿</div>
+      <div class="grid2" style="margin-top:10px;">
+        <div>
+          <div class="miniLabel">入住</div>
+          <input id="stayCheckin" class="input js-date" inputmode="numeric" placeholder="YYYY/MM/DD" maxlength="10">
+        </div>
+        <div>
+          <div class="miniLabel">退宿</div>
+          <input id="stayCheckout" class="input js-date" inputmode="numeric" placeholder="YYYY/MM/DD" maxlength="10">
+        </div>
+      </div>
 
-      div style=margin-top10px;
-        div class=miniLabel住宿金額（選填）div
-        input id=stayAmount class=input js-currency inputmode=numeric placeholder=請輸入住宿金額
-      div
+      <div style="margin-top:10px;">
+        <div class="miniLabel">住宿金額（選填）</div>
+        <input id="stayAmount" class="input js-currency" inputmode="numeric" placeholder="請輸入住宿金額">
+      </div>
 
-      div class=subText style=margin-top10px; colorvar(--text); font-weight800;
-        逾時將酌收$200小時
-      div
+      <div class="subText" style="margin-top:10px; color:var(--text); font-weight:800;">
+        逾時將酌收$200/小時
+      </div>
 
-      div class=miniLabel style=margin-top12px;住宿用品div
-      div class=checkGrid
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcStayItem value=飼料
+      <div class="miniLabel" style="margin-top:12px;">住宿用品</div>
+      <div class="checkGrid">
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcStayItem" value="飼料">
             飼料
-          label
-        div
+          </label>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcStayItem value=罐頭
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcStayItem" value="罐頭">
             罐頭
-          label
-        div
+          </label>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcStayItem value=碗
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcStayItem" value="碗">
             碗
-          label
-        div
+          </label>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcStayItem value=牙刷
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcStayItem" value="牙刷">
             牙刷
-          label
-        div
+          </label>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcStayItem value=睡墊
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcStayItem" value="睡墊">
             睡墊
-          label
-        div
+          </label>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcStayItem value=外出籠（袋）
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcStayItem" value="外出籠（袋）">
             外出籠（袋）
-          label
-        div
+          </label>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcStayItem value=衣服
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcStayItem" value="衣服">
             衣服
-          label
-        div
+          </label>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcStayItem value=項圈
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcStayItem" value="項圈">
             項圈
-          label
-        div
+          </label>
+        </div>
 
-        div class=serviceOptionBlock
-          label class=ck
-            input type=checkbox class=svcStayItem value=牽繩、胸背帶
+        <div class="serviceOptionBlock">
+          <label class="ck">
+            <input type="checkbox" class="svcStayItem" value="牽繩、胸背帶">
             牽繩、胸背帶
-          label
-        div
+          </label>
+        </div>
 
-        div class=serviceOptionBlock fullRow
-          label class=ck
-            input type=checkbox id=svcStayOther value=其他
+        <div class="serviceOptionBlock fullRow">
+          <label class="ck">
+            <input type="checkbox" id="svcStayOther" value="其他">
             其他
-          label
-        div
-      div
+          </label>
+        </div>
+      </div>
 
-      div id=svcStayOtherWrap class=otherInputWrap
-        input id=svcStayOtherText class=input type=text placeholder=請填寫其他住宿用品
-      div
+      <div id="svcStayOtherWrap" class="otherInputWrap">
+        <input id="svcStayOtherText" class="input" type="text" placeholder="請填寫其他住宿用品">
+      </div>
 
-      div class=label其他服務div
-      input id=serviceOtherNote class=input placeholder=請填寫其他服務內容
-      div style=margin-top8px;
-        input id=serviceOtherAmount class=input js-currency inputmode=numeric placeholder=其他服務金額（選填）
-      div
-    div
+      <div class="label">其他服務</div>
+      <input id="serviceOtherNote" class="input" placeholder="請填寫其他服務內容">
+      <div style="margin-top:8px;">
+        <input id="serviceOtherAmount" class="input js-currency" inputmode="numeric" placeholder="其他服務金額（選填）">
+      </div>
+    </div>
 
-    div class=card
-      div class=payHeader
-        div class=sectionTitle style=margin0;支付方式（選填）div
-        div class=payTotal總金額：span id=payTotalText$0spandiv
-      div
+    <div class="card">
+      <div class="payHeader">
+        <div class="sectionTitle" style="margin:0;">支付方式（選填）</div>
+        <div class="payTotal">總金額：<span id="payTotalText">$0</span></div>
+      </div>
 
-      div class=payMethodBlock
-        label class=choice
-          input type=checkbox class=payMethod value=現金 data-target=cashAmountWrap
+      <div class="payMethodBlock">
+        <label class="choice">
+          <input type="checkbox" class="payMethod" value="現金" data-target="cashAmountWrap">
           現金
-        label
-        div id=cashAmountWrap class=methodAmountWrap
-          input id=payAmountCash class=input js-currency inputmode=numeric placeholder=請輸入現金金額（選填）
-        div
-      div
+        </label>
+        <div id="cashAmountWrap" class="methodAmountWrap">
+          <input id="payAmountCash" class="input js-currency" inputmode="numeric" placeholder="請輸入現金金額（選填）">
+        </div>
+      </div>
 
-      div class=payMethodBlock
-        label class=choice
-          input type=checkbox class=payMethod value=轉帳 data-target=transferAmountWrap
+      <div class="payMethodBlock">
+        <label class="choice">
+          <input type="checkbox" class="payMethod" value="轉帳" data-target="transferAmountWrap">
           轉帳
-        label
-        div id=transferAmountWrap class=methodAmountWrap
-          input id=payAmountTransfer class=input js-currency inputmode=numeric placeholder=請輸入轉帳金額（選填）
-        div
-      div
+        </label>
+        <div id="transferAmountWrap" class="methodAmountWrap">
+          <input id="payAmountTransfer" class="input js-currency" inputmode="numeric" placeholder="請輸入轉帳金額（選填）">
+        </div>
+      </div>
 
-      div class=payMethodBlock
-        label class=choice
-          input type=checkbox class=payMethod value=電子支付 data-target=epayAmountWrap
+      <div class="payMethodBlock">
+        <label class="choice">
+          <input type="checkbox" class="payMethod" value="電子支付" data-target="epayAmountWrap">
           電子支付
-        label
-        div id=epayAmountWrap class=methodAmountWrap
-          input id=payAmountEpay class=input js-currency inputmode=numeric placeholder=請輸入電子支付金額（選填）
-        div
-      div
+        </label>
+        <div id="epayAmountWrap" class="methodAmountWrap">
+          <input id="payAmountEpay" class="input js-currency" inputmode="numeric" placeholder="請輸入電子支付金額（選填）">
+        </div>
+      </div>
 
-      div class=grid2 style=margin-top12px;
-        div
-          div class=miniLabel支付時間（選填）div
-          input id=payDate class=input js-date inputmode=numeric placeholder=YYYYMMDD maxlength=10
-        div
-        divdiv
-      div
+      <div class="grid2" style="margin-top:12px;">
+        <div>
+          <div class="miniLabel">支付時間（選填）</div>
+          <input id="payDate" class="input js-date" inputmode="numeric" placeholder="YYYY/MM/DD" maxlength="10">
+        </div>
+        <div></div>
+      </div>
 
-      div class=subText style=margin-top10px; colorvar(--text); font-weight800;
+      <div class="subText" style="margin-top:10px; color:var(--text); font-weight:800;">
         履約保障內容：預收費用總額逾 1 萬元以上者，超過支部分應提供至少 1 年履約保障
-      div
-    div
+      </div>
+    </div>
 
-    div class=card
-      div class=sectionTitle其他約定事項div
-      div class=contractBox
-        pre以上資料由飼主本人提供，並同意將資料內容提供於公司存續期間以電話、簡訊和寄發DM方式，提供相關活動或促銷訊息、或帶寵物到動物醫院留存相關資料使用。
+    <div class="card">
+      <div class="sectionTitle">其他約定事項</div>
+      <div class="contractBox">
+        <pre>以上資料由飼主本人提供，並同意將資料內容提供於公司存續期間以電話、簡訊和寄發DM方式，提供相關活動或促銷訊息、或帶寵物到動物醫院留存相關資料使用。
 1. 除本契約另有約定、特殊緊急情況、或不可抗力之情況外，未經飼主同意，店家不得將寵物帶離美容場所（同上店家地址）、轉售、轉讓或以其他變相方法作為其他用途。
 2. 飼主應於美容當日，將寵物領回，如經通知1日內未領回，依動保法第29條第一款通知主管機關，為飼主惡意棄養，相關罰金為3萬～15萬元，其他衍生性費用將跟飼主求償，例：人員加班費等。
 3. 寵物發生攻擊行為，如因飼主未善盡告知義務而造成店內人員傷亡、財物損毀等費用，將全額向飼主（寵物占有權人）求償。
@@ -1299,90 +1304,90 @@ pre
 7. 因本契約所生之訴訟，雙方合意以高雄地方法院為管轄法院。
 8. 美容契約相關法條，附件如店内張貼之公告，如有需求請自行拍照留存。
 9. 其他：
-pre
-      div
-    div
+</pre>
+      </div>
+    </div>
 
-    div class=card
-      div class=sectionTitle簽名div
-      div class=subText簽名送出後，將寄送副本到您的 Emaildiv
+    <div class="card">
+      <div class="sectionTitle">簽名</div>
+      <div class="subText">簽名送出後，將寄送副本到您的 Email</div>
 
-      div class=label審閱  簽署日期div
-      input type=text id=signDate class=input readonly
+      <div class="label">審閱 / 簽署日期</div>
+      <input type="text" id="signDate" class="input" readonly>
 
-      div class=label甲方簽名div
-      canvas id=sigcanvas
+      <div class="label">甲方簽名</div>
+      <canvas id="sig"></canvas>
 
-      div class=dangerNote簽名完成後將送出資料並寄送副本div
+      <div class="dangerNote">簽名完成後將送出資料並寄送副本</div>
 
-      button id=clear class=btn btnClear type=button清除簽名button
-      div id=msg class=msgdiv
-      button id=submit class=btn btnSubmit type=button onclick=handleSubmit()送出簽名button
-    div
+      <button id="clear" class="btn btnClear" type="button">清除簽名</button>
+      <div id="msg" class="msg"></div>
+      <button id="submit" class="btn btnSubmit" type="button" onclick="handleSubmit()">送出簽名</button>
+    </div>
 
-  div
+  </div>
 
-script
-const GOOGLE_SCRIPT_URL = httpsscript.google.commacrossAKfycbyAChFgroWCSthzzoW6-wGOYDPo85Ju3FOdABWWFLH0r-y7M3zfViU6NF-A5lxwfhFOexec;
-const SHARED_SECRET = xiongwang;
+<script>
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyxTnXngnMzJziBD_7GQZLmpXboA8tvWqTvpLPO2r7cmchW1dD_nSKwkECx1NUB6ujO/exec";
+const SHARED_SECRET = "xiongwang";
 
 const STORE_VET = {
-  name 愛心動物醫院,
-  phone 07-7156399,
-  address 高雄市苓雅區建國一路74-3號
+  name: "愛心動物醫院",
+  phone: "07-7156399",
+  address: "高雄市苓雅區建國一路74-3號"
 };
 
 function isValidEmail(email) {
-  return ^[^s@]+@[^s@]+.[^s@]+$.test(email);
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 function getRadio(name) {
-  return document.querySelector(`input[name=${name}]checked`).value  ;
+  return document.querySelector(`input[name="${name}"]:checked`)?.value || "";
 }
 
 function getCheckedValues(selectorOrElements) {
   const list = Array.isArray(selectorOrElements)
-     selectorOrElements
-     Array.from(document.querySelectorAll(selectorOrElements));
-  return list.filter(el = el.checked).map(el = el.value);
+    ? selectorOrElements
+    : Array.from(document.querySelectorAll(selectorOrElements));
+  return list.filter(el => el.checked).map(el => el.value);
 }
 
 function getPetTemperament() {
-  return Array.from(document.querySelectorAll(.pt))
-    .filter(el = el.checked)
-    .map(el = el.value);
+  return Array.from(document.querySelectorAll(".pt"))
+    .filter(el => el.checked)
+    .map(el => el.value);
 }
 
 function getServiceDetailList(list) {
   return list
-    .filter(el = el.checked)
-    .map(el = {
-      const wrap = document.getElementById(el.dataset.amountTarget  );
-      const amountInput = wrap  wrap.querySelector(input)  null;
+    .filter(el => el.checked)
+    .map(el => {
+      const wrap = document.getElementById(el.dataset.amountTarget || "");
+      const amountInput = wrap ? wrap.querySelector("input") : null;
       return {
-        item el.value,
-        amount amountInput  (amountInput.value  ).trim()  
+        item: el.value,
+        amount: amountInput ? (amountInput.value || "").trim() : ""
       };
     });
 }
 
 function getStayItemDetailList() {
-  return Array.from(document.querySelectorAll(.svcStayItem))
-    .filter(el = el.checked)
-    .map(el = ({
-      item el.value,
-      amount 
+  return Array.from(document.querySelectorAll(".svcStayItem"))
+    .filter(el => el.checked)
+    .map(el => ({
+      item: el.value,
+      amount: ""
     }));
 }
 
 function getMedicalHistory() {
   const arr = [];
-  const mhNone = document.getElementById(mh_none);
-  const otherInjury = document.getElementById(otherInjury);
+  const mhNone = document.getElementById("mh_none");
+  const otherInjury = document.getElementById("otherInjury");
 
   if (mhNone && mhNone.checked) arr.push(mhNone.value);
 
-  document.querySelectorAll(.mh).forEach(el = {
+  document.querySelectorAll(".mh").forEach(el => {
     if (el.checked) arr.push(el.value);
   });
 
@@ -1395,39 +1400,39 @@ function getMedicalHistory() {
 
 function getBodyChecks() {
   const items = [
-    { label 眼睛, key body_eyes, detailId bodyDetail_eyes },
-    { label 牙齒, key body_teeth, detailId bodyDetail_teeth },
-    { label 耳朵, key body_ears, detailId bodyDetail_ears },
-    { label 四肢, key body_limbs, detailId bodyDetail_limbs },
-    { label 皮膚, key body_skin, detailId bodyDetail_skin },
-    { label 皮毛, key body_coat, detailId bodyDetail_coat }
+    { label: "眼睛", key: "body_eyes", detailId: "bodyDetail_eyes" },
+    { label: "牙齒", key: "body_teeth", detailId: "bodyDetail_teeth" },
+    { label: "耳朵", key: "body_ears", detailId: "bodyDetail_ears" },
+    { label: "四肢", key: "body_limbs", detailId: "bodyDetail_limbs" },
+    { label: "皮膚", key: "body_skin", detailId: "bodyDetail_skin" },
+    { label: "皮毛", key: "body_coat", detailId: "bodyDetail_coat" }
   ];
 
-  return items.map(item = {
+  return items.map(item => {
     const detailEl = document.getElementById(item.detailId);
     return {
-      part item.label,
-      status getRadio(item.key)  正常,
-      detail detailEl  (detailEl.value  ).trim()  
+      part: item.label,
+      status: getRadio(item.key) || "正常",
+      detail: detailEl ? (detailEl.value || "").trim() : ""
     };
   });
 }
 
 function getPaymentDetailList() {
   const arr = [];
-  const payMethodBoxes = Array.from(document.querySelectorAll(.payMethod));
+  const payMethodBoxes = Array.from(document.querySelectorAll(".payMethod"));
 
-  payMethodBoxes.forEach(box = {
+  payMethodBoxes.forEach(box => {
     if (!box.checked) return;
 
-    let amount = ;
+    let amount = "";
     const targetId = box.dataset.target;
-    const wrap = document.getElementById(targetId  );
-    const input = wrap  wrap.querySelector(input)  null;
-    if (input) amount = (input.value  ).trim();
+    const wrap = document.getElementById(targetId || "");
+    const input = wrap ? wrap.querySelector("input") : null;
+    if (input) amount = (input.value || "").trim();
 
     arr.push({
-      method box.value,
+      method: box.value,
       amount
     });
   });
@@ -1436,144 +1441,145 @@ function getPaymentDetailList() {
 }
 
 function formatServiceText(details) {
-  if (!details  !details.length) return （未勾選）;
+  if (!details || !details.length) return "（未勾選）";
   return details
-    .map(item = item.amount  `${item.item}（${item.amount}）`  item.item)
-    .join(、);
+    .map(item => item.amount ? `${item.item}（${item.amount}）` : item.item)
+    .join("、");
 }
 
 function parseCurrency(v) {
-  const digits = String(v  ).replace(Dg, );
-  return digits  Number(digits)  0;
+  const digits = String(v || "").replace(/\D/g, "");
+  return digits ? Number(digits) : 0;
 }
 
 function formatCurrency(v) {
-  const digits = String(v  ).replace(Dg, );
-  if (!digits) return ;
-  return $ + Number(digits).toLocaleString(zh-TW);
+  const digits = String(v || "").replace(/\D/g, "");
+  if (!digits) return "";
+  return "$" + Number(digits).toLocaleString("zh-TW");
 }
 
 function formatCurrencyNumber(n) {
-  return $ + Number(n  0).toLocaleString(zh-TW);
+  return "$" + Number(n || 0).toLocaleString("zh-TW");
 }
 
 function formatYMD(value) {
-  const digits = String(value  ).replace(Dg, ).slice(0, 8);
-  if (!digits) return ;
+  const digits = String(value || "").replace(/\D/g, "").slice(0, 8);
+  if (!digits) return "";
 
   const y = digits.slice(0, 4);
   const m = digits.slice(4, 6);
   const d = digits.slice(6, 8);
 
   let out = y;
-  if (digits.length  4) out +=  + m;
-  if (digits.length  6) out +=  + d;
+  if (digits.length > 4) out += "/" + m;
+  if (digits.length > 6) out += "/" + d;
   return out;
 }
 
 function todayYMD() {
   const d = new Date();
   const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, 0);
-  const dd = String(d.getDate()).padStart(2, 0);
-  return `${y}${m}${dd}`;
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const dd = String(d.getDate()).padStart(2, "0");
+  return `${y}/${m}/${dd}`;
 }
 
 window.handleSubmit = async function () {
-  const canvas = document.getElementById(sig);
-  const submitBtn = document.getElementById(submit);
-  const msg = document.getElementById(msg);
-  const agree = document.getElementById(agree);
+  const canvas = document.getElementById("sig");
+  const submitBtn = document.getElementById("submit");
+  const msg = document.getElementById("msg");
+  const agree = document.getElementById("agree");
 
-  const ownerName = document.getElementById(ownerName);
-  const ownerPhone = document.getElementById(ownerPhone);
-  const ownerEmail = document.getElementById(ownerEmail);
-  const ownerAddress = document.getElementById(ownerAddress);
-  const emergencyName = document.getElementById(emergencyName);
-  const emergencyPhone = document.getElementById(emergencyPhone);
-  const ownerRelation = document.getElementById(ownerRelation);
+  const ownerName = document.getElementById("ownerName");
+  const ownerIdNo = document.getElementById("ownerIdNo");
+  const ownerPhone = document.getElementById("ownerPhone");
+  const ownerEmail = document.getElementById("ownerEmail");
+  const ownerAddress = document.getElementById("ownerAddress");
+  const emergencyName = document.getElementById("emergencyName");
+  const emergencyPhone = document.getElementById("emergencyPhone");
+  const ownerRelation = document.getElementById("ownerRelation");
 
-  const petName = document.getElementById(petName);
-  const petBreed = document.getElementById(petBreed);
-  const petAge = document.getElementById(petAge);
-  const petBirthday = document.getElementById(petBirthday);
-  const petWeight = document.getElementById(petWeight);
-  const signDate = document.getElementById(signDate);
-  const chipNo = document.getElementById(chipNo);
-  const petTemperamentNote = document.getElementById(petTemperamentNote);
+  const petName = document.getElementById("petName");
+  const petBreed = document.getElementById("petBreed");
+  const petAge = document.getElementById("petAge");
+  const petBirthday = document.getElementById("petBirthday");
+  const petWeight = document.getElementById("petWeight");
+  const signDate = document.getElementById("signDate");
+  const chipNo = document.getElementById("chipNo");
+  const petTemperamentNote = document.getElementById("petTemperamentNote");
 
-  const otherInjury = document.getElementById(otherInjury);
-  const otherText = document.getElementById(otherInjuryText);
+  const otherInjury = document.getElementById("otherInjury");
+  const otherText = document.getElementById("otherInjuryText");
 
-  const vetName = document.getElementById(vetName);
-  const vetPhone = document.getElementById(vetPhone);
-  const vetAddress = document.getElementById(vetAddress);
+  const vetName = document.getElementById("vetName");
+  const vetPhone = document.getElementById("vetPhone");
+  const vetAddress = document.getElementById("vetAddress");
 
-  const svcWashOther = document.getElementById(svcWashOther);
-  const svcWashOtherText = document.getElementById(svcWashOtherText);
-  const svcWashOtherAmount = document.getElementById(svcWashOtherAmount);
+  const svcWashOther = document.getElementById("svcWashOther");
+  const svcWashOtherText = document.getElementById("svcWashOtherText");
+  const svcWashOtherAmount = document.getElementById("svcWashOtherAmount");
 
-  const svcStayOther = document.getElementById(svcStayOther);
-  const svcStayOtherText = document.getElementById(svcStayOtherText);
+  const svcStayOther = document.getElementById("svcStayOther");
+  const svcStayOtherText = document.getElementById("svcStayOtherText");
 
-  const stayCheckin = document.getElementById(stayCheckin);
-  const stayCheckout = document.getElementById(stayCheckout);
-  const stayAmount = document.getElementById(stayAmount);
-  const serviceOtherNote = document.getElementById(serviceOtherNote);
-  const serviceOtherAmount = document.getElementById(serviceOtherAmount);
-  const payDate = document.getElementById(payDate);
-  const payTotalText = document.getElementById(payTotalText);
+  const stayCheckin = document.getElementById("stayCheckin");
+  const stayCheckout = document.getElementById("stayCheckout");
+  const stayAmount = document.getElementById("stayAmount");
+  const serviceOtherNote = document.getElementById("serviceOtherNote");
+  const serviceOtherAmount = document.getElementById("serviceOtherAmount");
+  const payDate = document.getElementById("payDate");
+  const payTotalText = document.getElementById("payTotalText");
 
-  const svcWashBoxes = Array.from(document.querySelectorAll(.svcWash));
-  const svcGroomBoxes = Array.from(document.querySelectorAll(.svcGroom));
-  const svcSpaBoxes = Array.from(document.querySelectorAll(.svcSpa));
-  const svcSingleBoxes = Array.from(document.querySelectorAll(.svcSingle));
-  const payMethodBoxes = Array.from(document.querySelectorAll(.payMethod));
+  const svcWashBoxes = Array.from(document.querySelectorAll(".svcWash"));
+  const svcGroomBoxes = Array.from(document.querySelectorAll(".svcGroom"));
+  const svcSpaBoxes = Array.from(document.querySelectorAll(".svcSpa"));
+  const svcSingleBoxes = Array.from(document.querySelectorAll(".svcSingle"));
+  const payMethodBoxes = Array.from(document.querySelectorAll(".payMethod"));
 
   function setError(t) {
-    console.error([UI ERROR], t);
+    console.error("[UI ERROR]", t);
     if (msg) {
-      msg.textContent = t  ;
-      msg.style.color = #9E5E4A;
+      msg.textContent = t || "";
+      msg.style.color = "#9E5E4A";
     }
     if (submitBtn) {
       submitBtn.disabled = false;
-      submitBtn.textContent = 送出簽名;
+      submitBtn.textContent = "送出簽名";
     }
   }
 
   function setOK(t) {
-    console.log([UI OK], t);
+    console.log("[UI OK]", t);
     if (msg) {
-      msg.textContent = t  ;
-      msg.style.color = #4E6B57;
+      msg.textContent = t || "";
+      msg.style.color = "#4E6B57";
     }
   }
 
   function setStep(t) {
-    console.log([STEP], t);
+    console.log("[STEP]", t);
     if (submitBtn) submitBtn.textContent = t;
     if (msg) {
       msg.textContent = t;
-      msg.style.color = #3F342C;
+      msg.style.color = "#3F342C";
     }
   }
 
   function resetSubmit() {
     if (submitBtn) {
       submitBtn.disabled = false;
-      submitBtn.textContent = 送出簽名;
+      submitBtn.textContent = "送出簽名";
     }
   }
 
   function requireValue(inputEl, label) {
     if (!inputEl) {
-      setError(系統缺少欄位： + label);
+      setError("系統缺少欄位：" + label);
       return null;
     }
-    const v = String(inputEl.value  ).trim();
+    const v = String(inputEl.value || "").trim();
     if (!v) {
-      setError(請填寫： + label);
+      setError("請填寫：" + label);
       inputEl.focus();
       return null;
     }
@@ -1581,37 +1587,37 @@ window.handleSubmit = async function () {
   }
 
   try {
-    console.log(========== handleSubmit start ==========);
+    console.log("========== handleSubmit start ==========");
 
     if (!canvas) {
-      setError(找不到簽名區塊);
+      setError("找不到簽名區塊");
       return;
     }
 
-    if (!agree  !agree.checked) {
-      setError(請先勾選同意契約內容);
+    if (!agree || !agree.checked) {
+      setError("請先勾選同意契約內容");
       return;
     }
 
-    const signatureDataUrl = canvas.toDataURL(imagepng);
-    console.log([DEBUG] signature length, signatureDataUrl.length  0);
+    const signatureDataUrl = canvas.toDataURL("image/png");
+    console.log("[DEBUG] signature length:", signatureDataUrl?.length || 0);
 
-    if (!signatureDataUrl  signatureDataUrl.length  3000) {
-      setError(請先完成簽名);
+    if (!signatureDataUrl || signatureDataUrl.length < 3000) {
+      setError("請先完成簽名");
       return;
     }
 
     if (submitBtn) submitBtn.disabled = true;
 
-    setStep(正在檢查資料...);
+    setStep("正在檢查資料...");
 
-    const isOwnerSelf = getRadio(isOwnerSelf)  是;
-    const chipHas = getRadio(chipHas)  有;
-    const neuterStatus = getRadio(neuterStatus)  已絕育;
-    const vetMode = getRadio(vetMode)  甲方指定;
+    const isOwnerSelf = getRadio("isOwnerSelf") || "是";
+    const chipHas = getRadio("chipHas") || "有";
+    const neuterStatus = getRadio("neuterStatus") || "已絕育";
+    const vetMode = getRadio("vetMode") || "甲方指定";
 
     const medicalHistory = getMedicalHistory();
-    const otherInjuryNote = otherInjury && otherInjury.checked  String(otherText.value  ).trim()  ;
+    const otherInjuryNote = otherInjury && otherInjury.checked ? String(otherText?.value || "").trim() : "";
     const bodyChecks = getBodyChecks();
 
     const serviceWash = getServiceDetailList(svcWashBoxes);
@@ -1622,157 +1628,161 @@ window.handleSubmit = async function () {
     const payMethods = getCheckedValues(payMethodBoxes);
     const paymentDetails = getPaymentDetailList();
 
-    const svcWashOtherDetail = svcWashOther && svcWashOther.checked  {
-      item String(svcWashOtherText.value  ).trim()
-         `其他：${String(svcWashOtherText.value  ).trim()}`
-         其他,
-      amount String(svcWashOtherAmount.value  ).trim()
-    }  null;
+    const svcWashOtherDetail = svcWashOther && svcWashOther.checked ? {
+      item: String(svcWashOtherText?.value || "").trim()
+        ? `其他：${String(svcWashOtherText.value || "").trim()}`
+        : "其他",
+      amount: String(svcWashOtherAmount?.value || "").trim()
+    } : null;
 
-    const svcStayOtherDetail = svcStayOther && svcStayOther.checked  {
-      item String(svcStayOtherText.value  ).trim()
-         `其他：${String(svcStayOtherText.value  ).trim()}`
-         其他,
-      amount 
-    }  null;
+    const svcStayOtherDetail = svcStayOther && svcStayOther.checked ? {
+      item: String(svcStayOtherText?.value || "").trim()
+        ? `其他：${String(svcStayOtherText.value || "").trim()}`
+        : "其他",
+      amount: ""
+    } : null;
 
-    const serviceOtherDetail = String(serviceOtherNote.value  ).trim()  {
-      item String(serviceOtherNote.value  ).trim(),
-      amount String(serviceOtherAmount.value  ).trim()
-    }  null;
+    const serviceOtherDetail = String(serviceOtherNote?.value || "").trim() ? {
+      item: String(serviceOtherNote.value || "").trim(),
+      amount: String(serviceOtherAmount?.value || "").trim()
+    } : null;
 
-    const finalVetName = vetMode === 乙方指定  STORE_VET.name  String(vetName.value  ).trim();
-    const finalVetPhone = vetMode === 乙方指定  STORE_VET.phone  String(vetPhone.value  ).trim();
-    const finalVetAddress = vetMode === 乙方指定  STORE_VET.address  String(vetAddress.value  ).trim();
+    const finalVetName = vetMode === "乙方指定" ? STORE_VET.name : String(vetName?.value || "").trim();
+    const finalVetPhone = vetMode === "乙方指定" ? STORE_VET.phone : String(vetPhone?.value || "").trim();
+    const finalVetAddress = vetMode === "乙方指定" ? STORE_VET.address : String(vetAddress?.value || "").trim();
 
-    const ownerNameVal = requireValue(ownerName, 甲方姓名);
+    const ownerNameVal = requireValue(ownerName, "甲方姓名");
     if (ownerNameVal === null) return;
 
-    const ownerPhoneVal = requireValue(ownerPhone, 聯絡電話);
+    const ownerIdNoVal = requireValue(ownerIdNo, "身分證字號");
+    if (ownerIdNoVal === null) return;
+
+    const ownerPhoneVal = requireValue(ownerPhone, "聯絡電話");
     if (ownerPhoneVal === null) return;
 
-    const ownerAddressVal = requireValue(ownerAddress, 通訊地址);
+    const ownerAddressVal = requireValue(ownerAddress, "通訊地址");
     if (ownerAddressVal === null) return;
 
-    const emergencyNameVal = requireValue(emergencyName, 緊急聯絡人);
+    const emergencyNameVal = requireValue(emergencyName, "緊急聯絡人");
     if (emergencyNameVal === null) return;
 
-    const emergencyPhoneVal = requireValue(emergencyPhone, 緊急聯絡人電話);
+    const emergencyPhoneVal = requireValue(emergencyPhone, "緊急聯絡人電話");
     if (emergencyPhoneVal === null) return;
 
-    const ownerEmailVal = requireValue(ownerEmail, Email);
+    const ownerEmailVal = requireValue(ownerEmail, "Email");
     if (ownerEmailVal === null) return;
 
-    if (isOwnerSelf === 否) {
-      const ownerRelationVal = requireValue(ownerRelation, 與飼主關係);
+    if (isOwnerSelf === "否") {
+      const ownerRelationVal = requireValue(ownerRelation, "與飼主關係");
       if (ownerRelationVal === null) return;
     }
 
-    const petNameVal = requireValue(petName, 寵物姓名);
+    const petNameVal = requireValue(petName, "寵物姓名");
     if (petNameVal === null) return;
 
-    const petBreedVal = requireValue(petBreed, 寵物品種);
+    const petBreedVal = requireValue(petBreed, "寵物品種");
     if (petBreedVal === null) return;
 
-    const petAgeVal = requireValue(petAge, 寵物年齡);
+    const petAgeVal = requireValue(petAge, "寵物年齡");
     if (petAgeVal === null) return;
 
-    const petWeightVal = requireValue(petWeight, 體重);
+    const petWeightVal = requireValue(petWeight, "體重");
     if (petWeightVal === null) return;
 
-    if (!getRadio(petSex)) {
-      setError(請選擇：性別);
+    if (!getRadio("petSex")) {
+      setError("請選擇：性別");
       resetSubmit();
       return;
     }
 
-    if (!getRadio(petType)) {
-      setError(請選擇：種類);
+    if (!getRadio("petType")) {
+      setError("請選擇：種類");
       resetSubmit();
       return;
     }
 
-    if (!getRadio(chipHas)) {
-      setError(請選擇：晶片有無);
+    if (!getRadio("chipHas")) {
+      setError("請選擇：晶片有無");
       resetSubmit();
       return;
     }
 
-    if (!getRadio(neuterStatus)) {
-      setError(請選擇：絕育狀況);
+    if (!getRadio("neuterStatus")) {
+      setError("請選擇：絕育狀況");
       resetSubmit();
       return;
     }
 
     const petTemperament = getPetTemperament();
     if (!petTemperament.length) {
-      setError(請至少勾選一項：寵物個性);
+      setError("請至少勾選一項：寵物個性");
       resetSubmit();
       return;
     }
 
     if (!medicalHistory.length) {
-      setError(請至少勾選一項：寵物病史);
+      setError("請至少勾選一項：寵物病史");
       resetSubmit();
       return;
     }
 
-    if (!getRadio(vetMode)) {
-      setError(請選擇：緊急就醫機構);
+    if (!getRadio("vetMode")) {
+      setError("請選擇：緊急就醫機構");
       resetSubmit();
       return;
     }
 
-    if (vetMode === 甲方指定) {
+    if (vetMode === "甲方指定") {
       if (!finalVetName) {
-        setError(請填寫：動物醫院名稱);
+        setError("請填寫：動物醫院名稱");
         vetName.focus();
         resetSubmit();
         return;
       }
       if (!finalVetPhone) {
-        setError(請填寫：動物醫院電話);
+        setError("請填寫：動物醫院電話");
         vetPhone.focus();
         resetSubmit();
         return;
       }
       if (!finalVetAddress) {
-        setError(請填寫：動物醫院地址);
+        setError("請填寫：動物醫院地址");
         vetAddress.focus();
         resetSubmit();
         return;
       }
     }
 
-    const signDateVal = requireValue(signDate, 簽署日期);
+    const signDateVal = requireValue(signDate, "簽署日期");
     if (signDateVal === null) return;
 
-    const petBirthdayVal = requireValue(petBirthday, 寵物生日);
+    const petBirthdayVal = requireValue(petBirthday, "寵物生日");
     if (petBirthdayVal === null) return;
 
     const data = {
-      ownerName ownerNameVal,
-      ownerPhone ownerPhoneVal,
-      ownerAddress ownerAddressVal,
-      emergencyName emergencyNameVal,
-      emergencyPhone emergencyPhoneVal,
-      ownerEmail ownerEmailVal,
+      ownerName: ownerNameVal,
+      ownerPhone: ownerPhoneVal,
+      ownerAddress: ownerAddressVal,
+      emergencyName: emergencyNameVal,
+      emergencyPhone: emergencyPhoneVal,
+      ownerEmail: ownerEmailVal,
+      ownerIdNo: ownerIdNoVal,
 
       isOwnerSelf,
-      ownerRelation isOwnerSelf === 否  String(ownerRelation.value  ).trim()  ,
+      ownerRelation: isOwnerSelf === "否" ? String(ownerRelation?.value || "").trim() : "",
 
-      petName petNameVal,
-      petBreed petBreedVal,
-      petSex getRadio(petSex)  男生,
-      petType getRadio(petType)  犬,
-      petAge petAgeVal,
-      petBirthday petBirthdayVal,
-      petWeight petWeightVal,
+      petName: petNameVal,
+      petBreed: petBreedVal,
+      petSex: getRadio("petSex") || "男生",
+      petType: getRadio("petType") || "犬",
+      petAge: petAgeVal,
+      petBirthday: petBirthdayVal,
+      petWeight: petWeightVal,
       petTemperament,
-      petTemperamentNote String(petTemperamentNote.value  ).trim(),
+      petTemperamentNote: String(petTemperamentNote?.value || "").trim(),
 
       chipHas,
-      chipNo chipHas === 有  String(chipNo.value  ).trim()  ,
+      chipNo: chipHas === "有" ? String(chipNo?.value || "").trim() : "",
       neuterStatus,
 
       medicalHistory,
@@ -1780,63 +1790,63 @@ window.handleSubmit = async function () {
       bodyChecks,
 
       vetMode,
-      vetName finalVetName,
-      vetPhone finalVetPhone,
-      vetAddress finalVetAddress,
+      vetName: finalVetName,
+      vetPhone: finalVetPhone,
+      vetAddress: finalVetAddress,
 
-      signDate signDateVal,
+      signDate: signDateVal,
 
       serviceWash,
-      serviceWashOther svcWashOtherDetail,
+      serviceWashOther: svcWashOtherDetail,
       serviceGroom,
       serviceSpa,
       serviceSingle,
-      stayCheckin String(stayCheckin.value  ).trim(),
-      stayCheckout String(stayCheckout.value  ).trim(),
-      stayAmount String(stayAmount.value  ).trim(),
+      stayCheckin: String(stayCheckin?.value || "").trim(),
+      stayCheckout: String(stayCheckout?.value || "").trim(),
+      stayAmount: String(stayAmount?.value || "").trim(),
       serviceStayItems,
-      serviceStayOther svcStayOtherDetail,
-      serviceOther serviceOtherDetail,
+      serviceStayOther: svcStayOtherDetail,
+      serviceOther: serviceOtherDetail,
 
       payMethods,
       paymentDetails,
-      payDate String(payDate.value  ).trim(),
-      payTotal payTotalText  payTotalText.textContent  $0
+      payDate: String(payDate?.value || "").trim(),
+      payTotal: payTotalText ? payTotalText.textContent : "$0"
     };
 
-    console.log([DEBUG] form data ready, data);
+    console.log("[DEBUG] form data ready:", data);
 
     if (!isValidEmail(data.ownerEmail)) {
-      setError(Email 格式不正確，請重新確認);
+      setError("Email 格式不正確，請重新確認");
       ownerEmail.focus();
       resetSubmit();
       return;
     }
 
-    const chipText = (data.chipHas === 有)
-       `有${data.chipNo  （ + data.chipNo + ）  （未填號碼）}`
-       無;
+    const chipText = (data.chipHas === "有")
+      ? `有${data.chipNo ? "（" + data.chipNo + "）" : "（未填號碼）"}`
+      : "無";
 
-    const mhText = data.medicalHistory.length  data.medicalHistory.join(、)  （未勾選）;
-    const ptText = data.petTemperament.length  data.petTemperament.join(、)  （未勾選）;
-    const ptNoteText = data.petTemperamentNote  data.petTemperamentNote  （未填）;
+    const mhText = data.medicalHistory.length ? data.medicalHistory.join("、") : "（未勾選）";
+    const ptText = data.petTemperament.length ? data.petTemperament.join("、") : "（未勾選）";
+    const ptNoteText = data.petTemperamentNote ? data.petTemperamentNote : "（未填）";
 
     const otherInjuryTextLine =
       (otherInjury && otherInjury.checked)
-         (data.otherInjuryNote  `其他應注意：${data.otherInjuryNote}`  其他應注意：（未填）)
-         其他應注意：—;
+        ? (data.otherInjuryNote ? `其他應注意：${data.otherInjuryNote}` : "其他應注意：（未填）")
+        : "其他應注意：—";
 
-    const bodyCheckText = data.bodyChecks.map(item = {
-      return item.status === 異常
-         `${item.part}：異常${item.detail  （ + item.detail + ）  }`
-         `${item.part}：正常`;
-    }).join(、);
+    const bodyCheckText = data.bodyChecks.map(item => {
+      return item.status === "異常"
+        ? `${item.part}：異常${item.detail ? "（" + item.detail + "）" : ""}`
+        : `${item.part}：正常`;
+    }).join("、");
 
     const paymentText = data.paymentDetails.length
-       data.paymentDetails
-          .map(item = item.amount  `${item.method}：${item.amount}`  `${item.method}`)
-          .join(、)
-       （未填）;
+      ? data.paymentDetails
+          .map(item => item.amount ? `${item.method}：${item.amount}` : `${item.method}`)
+          .join("、")
+      : "（未填）";
 
     const washTextList = [...data.serviceWash];
     if (data.serviceWashOther) washTextList.push(data.serviceWashOther);
@@ -1858,7 +1868,8 @@ window.handleSubmit = async function () {
 緊急聯絡人：${data.emergencyName}
 緊急聯絡人電話：${data.emergencyPhone}
 Email：${data.ownerEmail}
-是否飼主本人：${data.isOwnerSelf}${data.ownerRelation  （關係： + data.ownerRelation + ）  }
+身分證字號：${data.ownerIdNo}
+是否飼主本人：${data.isOwnerSelf}${data.ownerRelation ? "（關係：" + data.ownerRelation + "）" : ""}
 
 寵物名字：${data.petName}
 品種：${data.petBreed}
@@ -1879,316 +1890,316 @@ ${otherInjuryTextLine}
 大美容（含洗澡）：${formatServiceText(data.serviceGroom)}
 SPA：${formatServiceText(data.serviceSpa)}
 單次項目：${formatServiceText(data.serviceSingle)}
-住宿入住：${data.stayCheckin  （未填）}
-住宿退宿：${data.stayCheckout  （未填）}
-住宿金額：${data.stayAmount  （未填）}
+住宿入住：${data.stayCheckin || "（未填）"}
+住宿退宿：${data.stayCheckout || "（未填）"}
+住宿金額：${data.stayAmount || "（未填）"}
 住宿用品：${formatServiceText(stayItemTextList)}
-其他服務：${data.serviceOther  formatServiceText([data.serviceOther])  （未填）}
-支付方式  金額：${paymentText}
-支付總金額：${data.payTotal  $0}
-支付時間：${data.payDate  （未填）}
+其他服務：${data.serviceOther ? formatServiceText([data.serviceOther]) : "（未填）"}
+支付方式 / 金額：${paymentText}
+支付總金額：${data.payTotal || "$0"}
+支付時間：${data.payDate || "（未填）"}
 
 緊急就醫：${data.vetMode}／${data.vetName}／${data.vetPhone}／${data.vetAddress}
-審閱  簽署日期：${data.signDate}
+審閱 / 簽署日期：${data.signDate}
 
 ${completeNote}`;
 
-    const contractTextValue = (document.getElementById(contractText).innerText  ).trim();
+    const contractTextValue = (document.getElementById("contractText")?.innerText || "").trim();
 
-    console.log([DEBUG] contractText length, contractTextValue.length);
-    console.log([DEBUG] signatureDataUrl length, signatureDataUrl.length);
+    console.log("[DEBUG] contractText length:", contractTextValue.length);
+    console.log("[DEBUG] signatureDataUrl length:", signatureDataUrl.length);
 
-    setStep(正在上傳資料到系統...);
+    setStep("正在上傳資料到系統...");
 
     const payload = {
-      secret SHARED_SECRET,
+      secret: SHARED_SECRET,
       data,
       signatureDataUrl,
-      line {
-        userId ,
-        displayName 
+      line: {
+        userId: "",
+        displayName: ""
       },
-      contractText contractTextValue,
+      contractText: contractTextValue,
       textMsg
     };
 
-    console.log([DEBUG] payload prepared);
+    console.log("[DEBUG] payload prepared");
 
     const controller = new AbortController();
-    const timeoutId = setTimeout(() = controller.abort(), 60000);
+    const timeoutId = setTimeout(() => controller.abort(), 60000);
 
     let gasRes;
-    let gasText = ;
+    let gasText = "";
     let gasJson = null;
 
     try {
-      console.log([STEP] fetch GAS start);
+      console.log("[STEP] fetch GAS start");
       gasRes = await fetch(GOOGLE_SCRIPT_URL, {
-        method POST,
-        headers { Content-Type textplain;charset=UTF-8 },
-        body JSON.stringify(payload),
-        signal controller.signal
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=UTF-8" },
+        body: JSON.stringify(payload),
+        signal: controller.signal
       });
 
-      console.log([STEP] fetch GAS response received);
-      console.log([DEBUG] GAS status, gasRes.status, gasRes.statusText);
+      console.log("[STEP] fetch GAS response received");
+      console.log("[DEBUG] GAS status:", gasRes.status, gasRes.statusText);
 
       gasText = await gasRes.text();
-      console.log([DEBUG] GAS raw text, gasText);
+      console.log("[DEBUG] GAS raw text:", gasText);
 
       try {
         gasJson = JSON.parse(gasText);
       } catch (e) {
-        throw new Error(GAS 回傳格式錯誤： + gasText);
+        throw new Error("GAS 回傳格式錯誤：" + gasText);
       }
 
       if (!gasRes.ok) {
-        throw new Error(GAS HTTP 錯誤： + gasRes.status +   + gasRes.statusText);
+        throw new Error("GAS HTTP 錯誤：" + gasRes.status + " " + gasRes.statusText);
       }
 
       if (!gasJson.ok) {
-        throw new Error(GAS 錯誤： + (gasJson.error  未知錯誤));
+        throw new Error("GAS 錯誤：" + (gasJson.error || "未知錯誤"));
       }
     } finally {
       clearTimeout(timeoutId);
     }
 
-    setOK(資料已送出！n副本已寄送完成！);
+    setOK("資料已送出！\n副本已寄送完成！");
     resetSubmit();
-    console.log(========== handleSubmit success ==========);
+    console.log("========== handleSubmit success ==========");
 
   } catch (err) {
-    console.error([FATAL ERROR], err);
+    console.error("[FATAL ERROR]", err);
 
-    if (err.name === AbortError) {
-      setError(系統連線逾時：GAS 處理超過 60 秒，請優先檢查 Apps Script 是否卡在產 PDF、寄信或不是最新部署版本);
+    if (err.name === "AbortError") {
+      setError("系統連線逾時：GAS 處理超過 60 秒，請優先檢查 Apps Script 是否卡在產 PDF、寄信或不是最新部署版本");
     } else {
-      setError(err.message  送出失敗);
+      setError(err.message || "送出失敗");
     }
 
     resetSubmit();
   }
 };
 
-document.addEventListener(DOMContentLoaded, function () {
-  const signDate = document.getElementById(signDate);
-  const canvas = document.getElementById(sig);
-  const clearBtn = document.getElementById(clear);
-  const msg = document.getElementById(msg);
+document.addEventListener("DOMContentLoaded", function () {
+  const signDate = document.getElementById("signDate");
+  const canvas = document.getElementById("sig");
+  const clearBtn = document.getElementById("clear");
+  const msg = document.getElementById("msg");
 
   if (signDate) signDate.value = todayYMD();
 
-  document.querySelectorAll(.js-date).forEach(el = {
-    el.addEventListener(input, e = {
+  document.querySelectorAll(".js-date").forEach(el => {
+    el.addEventListener("input", e => {
       e.target.value = formatYMD(e.target.value);
     });
   });
 
-  const payAmountCash = document.getElementById(payAmountCash);
-  const payAmountTransfer = document.getElementById(payAmountTransfer);
-  const payAmountEpay = document.getElementById(payAmountEpay);
-  const payTotalText = document.getElementById(payTotalText);
+  const payAmountCash = document.getElementById("payAmountCash");
+  const payAmountTransfer = document.getElementById("payAmountTransfer");
+  const payAmountEpay = document.getElementById("payAmountEpay");
+  const payTotalText = document.getElementById("payTotalText");
 
   function updatePayTotal() {
     const total =
-      parseCurrency(payAmountCash.value) +
-      parseCurrency(payAmountTransfer.value) +
-      parseCurrency(payAmountEpay.value);
+      parseCurrency(payAmountCash?.value) +
+      parseCurrency(payAmountTransfer?.value) +
+      parseCurrency(payAmountEpay?.value);
     if (payTotalText) payTotalText.textContent = formatCurrencyNumber(total);
   }
 
-  document.querySelectorAll(.js-currency).forEach(el = {
-    el.addEventListener(input, e = {
+  document.querySelectorAll(".js-currency").forEach(el => {
+    el.addEventListener("input", e => {
       e.target.value = formatCurrency(e.target.value);
       updatePayTotal();
     });
   });
 
-  const ownerRelationWrap = document.getElementById(ownerRelationWrap);
-  const ownerRelation = document.getElementById(ownerRelation);
-  document.querySelectorAll('input[name=isOwnerSelf]').forEach(r = {
-    r.addEventListener(change, () = {
-      const notSelf = getRadio(isOwnerSelf) === 否;
-      if (ownerRelationWrap) ownerRelationWrap.classList.toggle(hidden, !notSelf);
-      if (!notSelf && ownerRelation) ownerRelation.value = ;
+  const ownerRelationWrap = document.getElementById("ownerRelationWrap");
+  const ownerRelation = document.getElementById("ownerRelation");
+  document.querySelectorAll('input[name="isOwnerSelf"]').forEach(r => {
+    r.addEventListener("change", () => {
+      const notSelf = getRadio("isOwnerSelf") === "否";
+      if (ownerRelationWrap) ownerRelationWrap.classList.toggle("hidden", !notSelf);
+      if (!notSelf && ownerRelation) ownerRelation.value = "";
     });
   });
 
-  const chipNoWrap = document.getElementById(chipNoWrap);
-  const chipNo = document.getElementById(chipNo);
+  const chipNoWrap = document.getElementById("chipNoWrap");
+  const chipNo = document.getElementById("chipNo");
   function refreshChipWrap() {
-    const show = getRadio(chipHas) === 有;
-    if (chipNoWrap) chipNoWrap.classList.toggle(hidden, !show);
-    if (!show && chipNo) chipNo.value = ;
+    const show = getRadio("chipHas") === "有";
+    if (chipNoWrap) chipNoWrap.classList.toggle("hidden", !show);
+    if (!show && chipNo) chipNo.value = "";
   }
-  document.querySelectorAll('input[name=chipHas]').forEach(r = {
-    r.addEventListener(change, refreshChipWrap);
+  document.querySelectorAll('input[name="chipHas"]').forEach(r => {
+    r.addEventListener("change", refreshChipWrap);
   });
   refreshChipWrap();
 
-  const vetName = document.getElementById(vetName);
-  const vetPhone = document.getElementById(vetPhone);
-  const vetAddress = document.getElementById(vetAddress);
-  document.querySelectorAll('input[name=vetMode]').forEach(r = {
-    r.addEventListener(change, () = {
-      const mode = getRadio(vetMode);
-      if (mode === 乙方指定) {
+  const vetName = document.getElementById("vetName");
+  const vetPhone = document.getElementById("vetPhone");
+  const vetAddress = document.getElementById("vetAddress");
+  document.querySelectorAll('input[name="vetMode"]').forEach(r => {
+    r.addEventListener("change", () => {
+      const mode = getRadio("vetMode");
+      if (mode === "乙方指定") {
         if (vetName) vetName.value = STORE_VET.name;
         if (vetPhone) vetPhone.value = STORE_VET.phone;
         if (vetAddress) vetAddress.value = STORE_VET.address;
       } else {
-        if (vetName) vetName.value = ;
-        if (vetPhone) vetPhone.value = ;
-        if (vetAddress) vetAddress.value = ;
+        if (vetName) vetName.value = "";
+        if (vetPhone) vetPhone.value = "";
+        if (vetAddress) vetAddress.value = "";
       }
     });
   });
 
-  const otherInjury = document.getElementById(otherInjury);
-  const otherWrap = document.getElementById(otherInjuryWrap);
-  const otherText = document.getElementById(otherInjuryText);
-  const mhNone = document.getElementById(mh_none);
-  const mhBoxes = Array.from(document.querySelectorAll(.mh));
+  const otherInjury = document.getElementById("otherInjury");
+  const otherWrap = document.getElementById("otherInjuryWrap");
+  const otherText = document.getElementById("otherInjuryText");
+  const mhNone = document.getElementById("mh_none");
+  const mhBoxes = Array.from(document.querySelectorAll(".mh"));
 
   function refreshOtherInjury() {
-    const show = !!otherInjury.checked;
-    if (otherWrap) otherWrap.style.display = show  block  none;
-    if (!show && otherText) otherText.value = ;
+    const show = !!otherInjury?.checked;
+    if (otherWrap) otherWrap.style.display = show ? "block" : "none";
+    if (!show && otherText) otherText.value = "";
   }
 
-  if (otherInjury) otherInjury.addEventListener(change, refreshOtherInjury);
+  if (otherInjury) otherInjury.addEventListener("change", refreshOtherInjury);
   refreshOtherInjury();
 
   function enforceMedicalExclusive() {
     if (!mhNone) return;
 
     if (mhNone.checked) {
-      mhBoxes.forEach(b = {
+      mhBoxes.forEach(b => {
         if (b !== mhNone) b.checked = false;
       });
       if (otherInjury) otherInjury.checked = false;
       refreshOtherInjury();
     } else {
-      const anyOther = mhBoxes.some(b = b.checked)  !!otherInjury.checked;
+      const anyOther = mhBoxes.some(b => b.checked) || !!otherInjury?.checked;
       if (anyOther) mhNone.checked = false;
     }
   }
 
-  if (mhNone) mhNone.addEventListener(change, enforceMedicalExclusive);
-  mhBoxes.forEach(b = b.addEventListener(change, enforceMedicalExclusive));
-  if (otherInjury) otherInjury.addEventListener(change, enforceMedicalExclusive);
+  if (mhNone) mhNone.addEventListener("change", enforceMedicalExclusive);
+  mhBoxes.forEach(b => b.addEventListener("change", enforceMedicalExclusive));
+  if (otherInjury) otherInjury.addEventListener("change", enforceMedicalExclusive);
 
-  const svcWashOther = document.getElementById(svcWashOther);
-  const svcWashOtherWrap = document.getElementById(svcWashOtherWrap);
-  const svcWashOtherText = document.getElementById(svcWashOtherText);
-  const svcWashOtherAmount = document.getElementById(svcWashOtherAmount);
+  const svcWashOther = document.getElementById("svcWashOther");
+  const svcWashOtherWrap = document.getElementById("svcWashOtherWrap");
+  const svcWashOtherText = document.getElementById("svcWashOtherText");
+  const svcWashOtherAmount = document.getElementById("svcWashOtherAmount");
 
   if (svcWashOther) {
-    svcWashOther.addEventListener(change, () = {
+    svcWashOther.addEventListener("change", () => {
       const show = !!svcWashOther.checked;
-      if (svcWashOtherWrap) svcWashOtherWrap.style.display = show  block  none;
+      if (svcWashOtherWrap) svcWashOtherWrap.style.display = show ? "block" : "none";
       if (!show) {
-        if (svcWashOtherText) svcWashOtherText.value = ;
-        if (svcWashOtherAmount) svcWashOtherAmount.value = ;
+        if (svcWashOtherText) svcWashOtherText.value = "";
+        if (svcWashOtherAmount) svcWashOtherAmount.value = "";
       }
     });
   }
 
-  const svcStayOther = document.getElementById(svcStayOther);
-  const svcStayOtherWrap = document.getElementById(svcStayOtherWrap);
-  const svcStayOtherText = document.getElementById(svcStayOtherText);
+  const svcStayOther = document.getElementById("svcStayOther");
+  const svcStayOtherWrap = document.getElementById("svcStayOtherWrap");
+  const svcStayOtherText = document.getElementById("svcStayOtherText");
 
   if (svcStayOther) {
-    svcStayOther.addEventListener(change, () = {
+    svcStayOther.addEventListener("change", () => {
       const show = !!svcStayOther.checked;
-      if (svcStayOtherWrap) svcStayOtherWrap.style.display = show  block  none;
-      if (!show && svcStayOtherText) svcStayOtherText.value = ;
+      if (svcStayOtherWrap) svcStayOtherWrap.style.display = show ? "block" : "none";
+      if (!show && svcStayOtherText) svcStayOtherText.value = "";
     });
   }
 
-  document.querySelectorAll(.svcAmountToggle).forEach(box = {
-    box.addEventListener(change, () = {
+  document.querySelectorAll(".svcAmountToggle").forEach(box => {
+    box.addEventListener("change", () => {
       const targetId = box.dataset.amountTarget;
       if (!targetId) return;
 
       const wrap = document.getElementById(targetId);
       if (!wrap) return;
 
-      if (wrap.classList.contains(otherInputWrap)) return;
+      if (wrap.classList.contains("otherInputWrap")) return;
 
-      wrap.style.display = box.checked  block  none;
+      wrap.style.display = box.checked ? "block" : "none";
       if (!box.checked) {
-        const input = wrap.querySelector(input);
-        if (input) input.value = ;
+        const input = wrap.querySelector("input");
+        if (input) input.value = "";
       }
     });
   });
 
-  const payMethodBoxes = Array.from(document.querySelectorAll(.payMethod));
-  payMethodBoxes.forEach(box = {
-    box.addEventListener(change, () = {
+  const payMethodBoxes = Array.from(document.querySelectorAll(".payMethod"));
+  payMethodBoxes.forEach(box => {
+    box.addEventListener("change", () => {
       const targetId = box.dataset.target;
       const wrap = document.getElementById(targetId);
       if (!wrap) return;
 
-      wrap.style.display = box.checked  block  none;
+      wrap.style.display = box.checked ? "block" : "none";
       if (!box.checked) {
-        const input = wrap.querySelector(input);
-        if (input) input.value = ;
+        const input = wrap.querySelector("input");
+        if (input) input.value = "";
       }
       updatePayTotal();
     });
   });
 
-  document.querySelectorAll(.bodyCheckItem).forEach(item = {
-    const radios = item.querySelectorAll('input[type=radio]');
-    const detailWrap = item.querySelector(.bodyCheckDetail);
-    const detailInput = detailWrap  detailWrap.querySelector(input)  null;
+  document.querySelectorAll(".bodyCheckItem").forEach(item => {
+    const radios = item.querySelectorAll('input[type="radio"]');
+    const detailWrap = item.querySelector(".bodyCheckDetail");
+    const detailInput = detailWrap ? detailWrap.querySelector("input") : null;
 
     function refresh() {
-      const checked = Array.from(radios).find(r = r.checked);
-      const show = checked && checked.value === 異常;
-      if (detailWrap) detailWrap.style.display = show  block  none;
-      if (!show && detailInput) detailInput.value = ;
+      const checked = Array.from(radios).find(r => r.checked);
+      const show = checked && checked.value === "異常";
+      if (detailWrap) detailWrap.style.display = show ? "block" : "none";
+      if (!show && detailInput) detailInput.value = "";
     }
 
-    radios.forEach(r = r.addEventListener(change, refresh));
+    radios.forEach(r => r.addEventListener("change", refresh));
     refresh();
   });
 
   if (canvas) {
-    const ctx = canvas.getContext(2d);
+    const ctx = canvas.getContext("2d");
     let drawing = false;
 
     function setupContext() {
       ctx.lineWidth = 4;
-      ctx.lineCap = round;
-      ctx.lineJoin = round;
-      ctx.strokeStyle = #3F342C;
-      ctx.fillStyle = #FFFFFF;
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      ctx.strokeStyle = "#3F342C";
+      ctx.fillStyle = "#FFFFFF";
     }
 
     function syncSize(preserveDrawing = true) {
       const r = canvas.getBoundingClientRect();
-      const dpr = window.devicePixelRatio  1;
+      const dpr = window.devicePixelRatio || 1;
 
-      let oldDataUrl = ;
+      let oldDataUrl = "";
       if (preserveDrawing) {
         try {
-          oldDataUrl = canvas.toDataURL(imagepng);
+          oldDataUrl = canvas.toDataURL("image/png");
         } catch (e) {
-          oldDataUrl = ;
+          oldDataUrl = "";
         }
       }
 
-      canvas.width = Math.max(1, Math.round(r.width  dpr));
-      canvas.height = Math.max(1, Math.round(r.height  dpr));
+      canvas.width = Math.max(1, Math.round(r.width * dpr));
+      canvas.height = Math.max(1, Math.round(r.height * dpr));
 
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       setupContext();
       ctx.fillRect(0, 0, r.width, r.height);
 
-      if (oldDataUrl && oldDataUrl.length  3000) {
+      if (oldDataUrl && oldDataUrl.length > 3000) {
         const img = new Image();
         img.onload = function () {
           ctx.drawImage(img, 0, 0, r.width, r.height);
@@ -2200,14 +2211,14 @@ document.addEventListener(DOMContentLoaded, function () {
     function point(e) {
       const r = canvas.getBoundingClientRect();
       return {
-        x e.clientX - r.left,
-        y e.clientY - r.top
+        x: e.clientX - r.left,
+        y: e.clientY - r.top
       };
     }
 
     function lockScroll(lock) {
-      document.body.style.overflow = lock  hidden  ;
-      document.body.style.touchAction = lock  none  ;
+      document.body.style.overflow = lock ? "hidden" : "";
+      document.body.style.touchAction = lock ? "none" : "";
     }
 
     function down(e) {
@@ -2219,7 +2230,7 @@ document.addEventListener(DOMContentLoaded, function () {
       ctx.beginPath();
       ctx.moveTo(p.x, p.y);
 
-      if (msg) msg.textContent = ;
+      if (msg) msg.textContent = "";
     }
 
     function move(e) {
@@ -2239,26 +2250,26 @@ document.addEventListener(DOMContentLoaded, function () {
 
     syncSize(false);
 
-    canvas.addEventListener(pointerdown, down, { passive false });
-    canvas.addEventListener(pointermove, move, { passive false });
-    window.addEventListener(pointerup, up);
-    window.addEventListener(pointercancel, up);
+    canvas.addEventListener("pointerdown", down, { passive: false });
+    canvas.addEventListener("pointermove", move, { passive: false });
+    window.addEventListener("pointerup", up);
+    window.addEventListener("pointercancel", up);
 
     if (clearBtn) {
-      clearBtn.addEventListener(click, () = {
+      clearBtn.addEventListener("click", () => {
         const r = canvas.getBoundingClientRect();
         setupContext();
         ctx.clearRect(0, 0, r.width, r.height);
         ctx.fillRect(0, 0, r.width, r.height);
 
         if (msg) {
-          msg.textContent = 已清除，請重新簽名;
-          msg.style.color = #9E5E4A;
+          msg.textContent = "已清除，請重新簽名";
+          msg.style.color = "#9E5E4A";
         }
       });
     }
   }
 });
-script
-body
-html
+</script>
+</body>
+</html>
