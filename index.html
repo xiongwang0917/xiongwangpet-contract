@@ -528,12 +528,11 @@
 但犬、貓未辦理寵物登記者，得提供其他足以辨識個體身分之資訊。
 (二)甲方：
 1. 姓名：
-2. 國民身分證統一編號/居留證號碼：
-3. 通訊地址：
-4. 聯絡電話：
-5. 緊急聯絡人：
-6. 緊急聯絡人之聯絡電話：
-7. 犬、貓需緊急就醫時指定之獸醫診療場所
+2. 通訊地址：
+3. 聯絡電話：
+4. 緊急聯絡人：
+5. 緊急聯絡人之聯絡電話：
+6. 犬、貓需緊急就醫時指定之獸醫診療場所
 (三)乙方：
 1. 公司或商號名稱：熊汪寵物美容
 2. 代表人或負責人姓名：黃淑婷
@@ -626,11 +625,10 @@
 本契約之附件「寵物基本資料及健康狀況填寫表」（包含但不限於寵物基本資料、健康狀況、個性傾向、病史、服務項目及相關告知事項），
 為本契約之一部分，與本契約具有同一之效力。甲方確認已於簽訂本契約前，依乙方之說明完整填寫前述附件，並同意其內容作為乙方評估是否提供犬、貓美容服務及服務方式之依據。前述附件得以書面、電子文件、拍照、掃描或其他可供日後查證之方式留存，均視為有效。
 
-———————————————————————————
+———————————————————————————————————
 立契約書人
 甲方（消費者）
 姓名：
-國民身分證統一編號或居留證號碼：
 聯絡電話：
 地址：
 
@@ -658,9 +656,6 @@
 
       <div class="label">甲方姓名（飼主）</div>
       <input id="ownerName" class="input" placeholder="請輸入飼主姓名">
-
-      <div class="label">身分證字號</div>
-      <input id="ownerIdNo" class="input" placeholder="請輸入身分證字號">
 
       <div class="label">聯絡電話</div>
       <input id="ownerPhone" class="input" inputmode="tel" placeholder="請輸入聯絡電話">
@@ -1328,7 +1323,7 @@
   </div>
 
 <script>
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyxTnXngnMzJziBD_7GQZLmpXboA8tvWqTvpLPO2r7cmchW1dD_nSKwkECx1NUB6ujO/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyAChFgroWCSthzzoW6-wGOYDPo85Ju3FOdABWWFLH0r-y7M3zfViU6NF-A5lxwfhFO/exec";
 const SHARED_SECRET = "xiongwang";
 
 const STORE_VET = {
@@ -1491,7 +1486,6 @@ window.handleSubmit = async function () {
   const agree = document.getElementById("agree");
 
   const ownerName = document.getElementById("ownerName");
-  const ownerIdNo = document.getElementById("ownerIdNo");
   const ownerPhone = document.getElementById("ownerPhone");
   const ownerEmail = document.getElementById("ownerEmail");
   const ownerAddress = document.getElementById("ownerAddress");
@@ -1654,9 +1648,6 @@ window.handleSubmit = async function () {
     const ownerNameVal = requireValue(ownerName, "甲方姓名");
     if (ownerNameVal === null) return;
 
-    const ownerIdNoVal = requireValue(ownerIdNo, "身分證字號");
-    if (ownerIdNoVal === null) return;
-
     const ownerPhoneVal = requireValue(ownerPhone, "聯絡電話");
     if (ownerPhoneVal === null) return;
 
@@ -1766,7 +1757,6 @@ window.handleSubmit = async function () {
       emergencyName: emergencyNameVal,
       emergencyPhone: emergencyPhoneVal,
       ownerEmail: ownerEmailVal,
-      ownerIdNo: ownerIdNoVal,
 
       isOwnerSelf,
       ownerRelation: isOwnerSelf === "否" ? String(ownerRelation?.value || "").trim() : "",
@@ -1868,7 +1858,6 @@ window.handleSubmit = async function () {
 緊急聯絡人：${data.emergencyName}
 緊急聯絡人電話：${data.emergencyPhone}
 Email：${data.ownerEmail}
-身分證字號：${data.ownerIdNo}
 是否飼主本人：${data.isOwnerSelf}${data.ownerRelation ? "（關係：" + data.ownerRelation + "）" : ""}
 
 寵物名字：${data.petName}
